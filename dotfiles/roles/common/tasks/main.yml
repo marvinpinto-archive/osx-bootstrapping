@@ -2,3 +2,9 @@
 
 - name: 'Ensure we can connect to this host'
   ping:
+
+- name: 'Create the dotfiles-src directory'
+  file:
+    path: '~/dotfiles-src'
+    state: 'directory'
+    mode: '0700'
