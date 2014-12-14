@@ -13,6 +13,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Hostname is relevant to which puppet manifest gets applied
   config.vm.hostname = HOSTNAME
 
+  # Set the static IP address to 10.0.0.132
+  config.vm.network "public_network", ip: "10.0.0.132"
+
   # Set the virtualbox name to be the hostname
   config.vm.define HOSTNAME do |t|
   end
