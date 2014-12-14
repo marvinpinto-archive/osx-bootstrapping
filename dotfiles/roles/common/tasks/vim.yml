@@ -1,0 +1,18 @@
+---
+- name: 'Create the ~/tmp directory used by vim'
+  file:
+    path: '~/tmp'
+    state: 'directory'
+    mode: '0700'
+
+- name: 'Put the .vimrc file in place'
+  copy:
+    src: 'vimrc'
+    dest: '~/.vimrc'
+    mode: '0600'
+
+- name: 'Copy the .vim directory'
+  synchronize:
+    src: 'vim/'
+    dest: '~/.vim'
+    delete: 'yes'

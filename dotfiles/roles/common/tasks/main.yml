@@ -3,20 +3,4 @@
 - name: 'Ensure we can connect to this host'
   ping:
 
-- name: 'Create the ~/tmp directory used by vim'
-  file:
-    path: '~/tmp'
-    state: 'directory'
-    mode: '0700'
-
-- name: '.vimrc'
-  copy:
-    src: 'vimrc'
-    dest: '~/.vimrc'
-    mode: '0600'
-
-- name: 'Copy the .vim directory'
-  synchronize:
-    src: 'vim/'
-    dest: '~/.vim'
-    delete: 'yes'
+- include: vim.yml
