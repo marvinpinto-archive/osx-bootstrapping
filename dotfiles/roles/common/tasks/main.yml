@@ -3,13 +3,8 @@
 - name: 'Ensure we can connect to this host'
   ping:
 
-- name: 'Create the ~/.functions directory'
-  file:
-    path: '~/.functions'
-    state: 'directory'
-    mode: '0700'
-
 - include: vim.yml
 - include: git.yml
 - include: tmux.yml
 - include: aliases.yml
+- include: functions.yml

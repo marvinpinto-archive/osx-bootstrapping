@@ -1,0 +1,23 @@
+---
+- name: 'Create the ~/.functions directory'
+  file:
+    path: '~/.functions'
+    state: 'directory'
+    mode: '0700'
+
+- name: 'Put the ~/.functions/git_functions file in place'
+  copy:
+    src: 'git_functions'
+    dest: '~/.functions/git_functions'
+    mode: '0600'
+
+- shell: 'ls -1 ~/.functions'
+  register: contents
+  changed_when: False
+
+- name: 'Ensure that the .functions directory contains nothing else'
+  file:
+    name: "~/.functions/{{ item }}"
+    state: 'absent'
+  with_items: contents.stdout_lines
+  when: item not in functions_managed_files

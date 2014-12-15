@@ -10,9 +10,3 @@
     src: 'gitconfig'
     dest: '~/.gitconfig'
     mode: '0600'
-
-- name: 'Put the ~/.functions/git_functions file in place'
-  copy:
-    src: 'git_functions'
-    dest: '~/.functions/git_functions'
-    mode: '0600'
