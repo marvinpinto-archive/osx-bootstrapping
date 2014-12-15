@@ -3,4 +3,16 @@
 - name: 'Ensure we can connect to this host'
   ping:
 
+- name: 'Create the ~/.functions directory'
+  file:
+    path: '~/.functions'
+    state: 'directory'
+    mode: '0700'
+
+- name: 'Create the ~/.aliases directory'
+  file:
+    path: '~/.aliases'
+    state: 'directory'
+    mode: '0700'
+
 - include: vim.yml
