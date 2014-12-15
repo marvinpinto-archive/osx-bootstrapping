@@ -1,0 +1,24 @@
+---
+- name: 'Put the .gitignore_global file in place'
+  copy:
+    src: 'gitignore_global'
+    dest: '~/.gitignore_global'
+    mode: '0600'
+
+- name: 'Put the .gitconfig file in place'
+  copy:
+    src: 'gitconfig'
+    dest: '~/.gitconfig'
+    mode: '0600'
+
+- name: 'Put the ~/.aliases/git_aliases file in place'
+  copy:
+    src: 'git_aliases'
+    dest: '~/.aliases/git_aliases'
+    mode: '0600'
+
+- name: 'Put the ~/.functions/git_functions file in place'
+  copy:
+    src: 'git_functions'
+    dest: '~/.functions/git_functions'
+    mode: '0600'

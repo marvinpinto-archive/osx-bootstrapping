@@ -16,3 +16,4 @@
     mode: '0700'
 
 - include: vim.yml
+- include: git.yml
