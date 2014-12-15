@@ -11,3 +11,13 @@
     dest: '~/.aliases/git_aliases'
     mode: '0600'
 
+- shell: 'ls -1 ~/.aliases'
+  register: contents
+  changed_when: False
+
+- name: 'Ensure that the .aliases directory contains nothing else'
+  file:
+    name: "~/.aliases/{{ item }}"
+    state: 'absent'
+  with_items: contents.stdout_lines
+  when: item not in aliases_managed_files
