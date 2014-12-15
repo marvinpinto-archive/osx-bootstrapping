@@ -9,12 +9,6 @@
     state: 'directory'
     mode: '0700'
 
-- name: 'Create the ~/.aliases directory'
-  file:
-    path: '~/.aliases'
-    state: 'directory'
-    mode: '0700'
-
 - include: vim.yml
 - include: git.yml
 - include: tmux.yml

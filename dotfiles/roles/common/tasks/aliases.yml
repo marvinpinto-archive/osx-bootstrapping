@@ -1,0 +1,13 @@
+---
+- name: 'Create the ~/.aliases directory'
+  file:
+    path: '~/.aliases'
+    state: 'directory'
+    mode: '0700'
+
+- name: 'Put the ~/.aliases/git_aliases file in place'
+  copy:
+    src: 'git_aliases'
+    dest: '~/.aliases/git_aliases'
+    mode: '0600'
+
