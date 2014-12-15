@@ -1,0 +1,12 @@
+---
+- name: 'Put the .tmux.conf file in place'
+  copy:
+    src: 'tmux.conf'
+    dest: '~/.tmux.conf'
+    mode: '0600'
+
+- name: 'Put the .tmux-osx.conf file in place'
+  copy:
+    src: 'tmux-osx.conf'
+    dest: '~/.tmux-osx.conf'
+    mode: '0600'
