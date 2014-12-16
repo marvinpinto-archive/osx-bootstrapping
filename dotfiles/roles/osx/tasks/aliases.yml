@@ -1,0 +1,6 @@
+---
+- name: 'Put the ~/.aliases/2-osx_aliases file in place'
+  copy:
+    src: 'aliases'
+    dest: '~/.aliases/2-osx_aliases'
+    mode: '0600'

@@ -3,6 +3,7 @@
 aliases_managed_files:
   - '0-aliases'
   - '1-git_aliases'
+  - '2-osx_aliases'
 
 functions_managed_files:
   - '0-functions'
