@@ -1,0 +1,6 @@
+---
+- name: 'Put the ~/bin/colorssh file in place'
+  copy:
+    src: 'colorssh'
+    dest: '~/bin/colorssh'
+    mode: '0700'

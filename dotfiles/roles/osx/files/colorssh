@@ -1,0 +1,92 @@
+#!/bin/bash
+
+host=$1
+defaultcolor="12519,82889,21498"
+defaulttitle="localhost"
+LUMIN_THRESHOLD=19000
+STARTING_FACTOR=0.48
+
+
+if [ "$2" ]; then
+  exec ssh $*
+fi
+
+
+trap cleanup 1 2 3 6
+
+
+# Cleanup after ourselves
+cleanup() {
+  set_iterm_color ${defaultcolor}
+  set_iterm_title ${defaulttitle}
+}
+
+
+# Convert the given input string into a suitable (rgb) hex value. This is really simple and I couldn't be bothered making it better.
+get_rgb() {
+  hex=`echo "$1" | md5`
+  hex=`echo $hex | tr '[:lower:]' '[:upper:]'`
+
+  # Split up the 33-char md5 string into three pieces of 11
+  local r=${hex:0:11}
+  local g=${hex:11:11}
+  local b=${hex:22:11}
+
+  # Convert base 16 to base 10
+  local r=`echo "ibase=16; $r" | bc`
+  local g=`echo "ibase=16; $g" | bc`
+  local b=`echo "ibase=16; $b" | bc`
+
+  # Mod these rgb values down to <= 65535
+  local r=`echo "$r % 65535" | bc`
+  local g=`echo "$g % 65535" | bc`
+  local b=`echo "$b % 65535" | bc`
+
+  local factor=$STARTING_FACTOR
+  local lumin=`calc_perceived_luminance "${r},${g},${b}"`
+  while [ $lumin -gt $LUMIN_THRESHOLD ]; do
+    # Darken each component by a factor
+    r=`echo "($r - ($factor * $r))/1" | bc`
+    g=`echo "($g - ($factor * $g))/1" | bc`
+    b=`echo "($b - ($factor * $b))/1" | bc`
+    lumin=`calc_perceived_luminance "${r},${g},${b}"`
+    factor=`echo "$factor + 0.01" | bc`
+  done
+
+  # Return the value
+  echo "${r},${g},${b}"
+}
+
+
+# Calculate the perceived luminance
+# Nothing too fancy here, idea from: http://stackoverflow.com/a/596243/1101070
+calc_perceived_luminance() {
+  local input=$1
+  local r=$(echo $input | cut -d',' -f1)
+  local g=$(echo $input | cut -d',' -f2)
+  local b=$(echo $input | cut -d',' -f3)
+  # local res=`echo "0.299*${r} + 0.587*${g} + 0.114*${b}" | bc`
+  local res=`echo "0.2126*${r} + 0.7152*${g} + 0.0722*${b}" | bc`
+  # Round it down to the nearest integer
+  local res=`echo "$res / 1" | bc`
+  echo "${res}"
+}
+
+
+# Set the iterm2 title
+set_iterm_title() {
+  echo -ne "\033]0;${1}\007"
+}
+
+
+# Set the iterm2 background color
+set_iterm_color() {
+  osascript -e 'tell application "iTerm" to set background color of (current session of current terminal) to {'"$1"'}'
+}
+
+
+mColor=`get_rgb ${host}`
+set_iterm_color "${mColor}"
+ssh ${host}
+cleanup
+

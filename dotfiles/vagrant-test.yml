@@ -3,4 +3,5 @@
   roles:
     - pre_verification
     - common
+    - osx
     - post_verification
