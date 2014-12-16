@@ -11,8 +11,8 @@
     dest: '~/.bash_profile'
     mode: '0600'
 
-- name: 'Put the .bash_prompt file in place'
+- name: 'Put the ~/.bash/0-bash_prompt file in place'
   copy:
     src: 'bash_prompt'
-    dest: '~/.bash_prompt'
+    dest: '~/.bash/0-bash_prompt'
     mode: '0600'

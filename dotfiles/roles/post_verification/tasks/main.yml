@@ -4,3 +4,4 @@
 - include: functions.yml
 - include: aliases.yml
 - include: exports.yml
+- include: bash.yml

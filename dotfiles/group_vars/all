@@ -10,3 +10,6 @@ functions_managed_files:
 
 exports_managed_files:
   - '0-exports'
+
+bash_managed_files:
+  - '0-bash_prompt'
