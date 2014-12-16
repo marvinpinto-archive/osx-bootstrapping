@@ -6,3 +6,4 @@
 - include: tmux.yml
 - include: aliases.yml
 - include: functions.yml
+- include: inputrc.yml

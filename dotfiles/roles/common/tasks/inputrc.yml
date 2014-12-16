@@ -1,0 +1,6 @@
+---
+- name: 'Put the ~/.inputrc file in place'
+  copy:
+    src: 'inputrc'
+    dest: '~/.inputrc'
+    mode: '0600'
