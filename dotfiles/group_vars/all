@@ -1,6 +1,7 @@
 ---
 aliases_managed_files:
   - 'git_aliases'
+  - 'aliases'
 
 functions_managed_files:
   - 'git_functions'
