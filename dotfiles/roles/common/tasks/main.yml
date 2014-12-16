@@ -1,8 +1,6 @@
 ---
-
 - name: 'Ensure we can connect to this host'
   ping:
-
 - include: vim.yml
 - include: git.yml
 - include: tmux.yml

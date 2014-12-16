@@ -1,3 +1,5 @@
 ---
+- name: 'Ensure we can connect to this host'
+  ping:
 - include: functions.yml
 - include: aliases.yml
