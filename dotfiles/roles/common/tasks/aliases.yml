@@ -1,6 +1,6 @@
 ---
-- name: 'Put the ~/.aliases/aliases file in place'
+- name: 'Put the ~/.aliases/0-aliases file in place'
   copy:
     src: 'aliases'
-    dest: '~/.aliases/aliases'
+    dest: '~/.aliases/0-aliases'
     mode: '0600'

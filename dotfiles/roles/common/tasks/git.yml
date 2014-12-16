@@ -11,10 +11,10 @@
     dest: '~/.gitconfig'
     mode: '0600'
 
-- name: 'Put the ~/.aliases/git_aliases file in place'
+- name: 'Put the ~/.aliases/1-git_aliases file in place'
   copy:
     src: 'git_aliases'
-    dest: '~/.aliases/git_aliases'
+    dest: '~/.aliases/1-git_aliases'
     mode: '0600'
 
 - name: 'Put the ~/.functions/1-git_functions file in place'
