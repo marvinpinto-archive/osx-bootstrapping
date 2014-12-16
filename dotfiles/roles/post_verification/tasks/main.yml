@@ -3,3 +3,4 @@
   ping:
 - include: functions.yml
 - include: aliases.yml
+- include: exports.yml

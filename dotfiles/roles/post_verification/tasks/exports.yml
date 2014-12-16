@@ -1,0 +1,11 @@
+---
+- shell: 'ls -1 ~/.exports'
+  register: contents
+  changed_when: False
+
+- name: 'Ensure that the .exports directory contains nothing else'
+  file:
+    name: "~/.exports/{{ item }}"
+    state: 'absent'
+  with_items: contents.stdout_lines
+  when: item not in exports_managed_files

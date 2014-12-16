@@ -6,3 +6,6 @@ aliases_managed_files:
 functions_managed_files:
   - 'git_functions'
   - 'functions'
+
+exports_managed_files:
+  - 'exports'

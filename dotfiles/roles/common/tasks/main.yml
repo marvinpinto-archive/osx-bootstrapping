@@ -7,3 +7,4 @@
 - include: aliases.yml
 - include: functions.yml
 - include: inputrc.yml
+- include: exports.yml

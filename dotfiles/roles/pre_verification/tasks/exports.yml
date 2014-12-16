@@ -1,0 +1,6 @@
+---
+- name: 'Create the ~/.exports directory'
+  file:
+    path: '~/.exports'
+    state: 'directory'
+    mode: '0700'
