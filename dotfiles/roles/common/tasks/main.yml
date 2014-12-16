@@ -5,3 +5,4 @@
 - include: git.yml
 - include: tmux.yml
 - include: aliases.yml
+- include: functions.yml
