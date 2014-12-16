@@ -17,8 +17,8 @@
     dest: '~/.aliases/git_aliases'
     mode: '0600'
 
-- name: 'Put the ~/.functions/git_functions file in place'
+- name: 'Put the ~/.functions/1-git_functions file in place'
   copy:
     src: 'git_functions'
-    dest: '~/.functions/git_functions'
+    dest: '~/.functions/1-git_functions'
     mode: '0600'

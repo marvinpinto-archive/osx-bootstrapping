@@ -1,6 +1,6 @@
 ---
-- name: 'Put the ~/.functions/functions file in place'
+- name: 'Put the ~/.functions/0-functions file in place'
   copy:
     src: 'functions'
-    dest: '~/.functions/functions'
+    dest: '~/.functions/0-functions'
     mode: '0600'

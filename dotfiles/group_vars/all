@@ -1,11 +1,12 @@
+# vim: set filetype=yaml :
 ---
 aliases_managed_files:
   - 'git_aliases'
   - 'aliases'
 
 functions_managed_files:
-  - 'git_functions'
-  - 'functions'
+  - '0-functions'
+  - '1-git_functions'
 
 exports_managed_files:
   - 'exports'
