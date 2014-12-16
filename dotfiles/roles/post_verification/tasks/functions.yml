@@ -1,16 +1,4 @@
 ---
-- name: 'Create the ~/.functions directory'
-  file:
-    path: '~/.functions'
-    state: 'directory'
-    mode: '0700'
-
-- name: 'Put the ~/.functions/git_functions file in place'
-  copy:
-    src: 'git_functions'
-    dest: '~/.functions/git_functions'
-    mode: '0600'
-
 - shell: 'ls -1 ~/.functions'
   register: contents
   changed_when: False

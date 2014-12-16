@@ -1,0 +1,6 @@
+---
+- name: 'Create the ~/.aliases directory'
+  file:
+    path: '~/.aliases'
+    state: 'directory'
+    mode: '0700'

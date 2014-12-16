@@ -1,0 +1,6 @@
+---
+- name: 'Create the ~/.functions directory'
+  file:
+    path: '~/.functions'
+    state: 'directory'
+    mode: '0700'

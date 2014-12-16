@@ -1,4 +1,6 @@
 ---
 - hosts: vagrant
   roles:
+    - pre_verification
     - common
+    - post_verification
