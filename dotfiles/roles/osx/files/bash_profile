@@ -1,0 +1,10 @@
+# vim: set filetype=sh :
+
+# Homebrew bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  source $(brew --prefix)/etc/bash_completion
+fi
+
+# Set iterm's background color to something sane
+MY_COLOR="12519,82889,21498"
+osascript -e 'tell application "iTerm" to set background color of (current session of current terminal) to {'"${MY_COLOR}"'}'

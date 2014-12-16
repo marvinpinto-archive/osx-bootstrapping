@@ -1,0 +1,6 @@
+---
+- name: 'Put the ~/.bash/2-bash_profile_osx file in place'
+  copy:
+    src: 'bash_profile'
+    dest: '~/.bash/2-bash_profile_osx'
+    mode: '0600'

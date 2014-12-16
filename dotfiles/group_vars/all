@@ -14,6 +14,7 @@ exports_managed_files:
 
 bash_managed_files:
   - '0-bash_prompt'
+  - '2-bash_profile_osx'
 
 bin_managed_files:
   - 'colorssh'
