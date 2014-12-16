@@ -1,0 +1,47 @@
+# vim: set filetype=sh :
+
+function __prompt_command() {
+  local EXIT="$?"
+  PS1=""
+
+  # Set the terminal title
+  echo -ne "\033]0;${USER}@${HOSTNAME}\007"
+
+  local RED="\[$(tput setaf 1)\]"
+  local GREEN="\[$(tput setaf 2)\]"
+  local YELLOW="\[$(tput setaf 3)\]"
+  local BLUE="\[$(tput setaf 4)\]"
+  local MAGENTA="\[$(tput setaf 5)\]"
+  local CYAN="\[$(tput setaf 6)\]"
+  local WHITE="\[$(tput setaf 7)\]"
+  local BOLD="\[$(tput bold)\]"
+  local UNDERLINE="\[$(tput sgr 0 1)\]"
+  local RESET="\[$(tput sgr0)\]"
+  local PROMPTCOL="${YELLOW}"
+
+  # Bright red prompt if root
+  if [ `id -u` == 0 ]; then
+    PS1+="\n${RED}"
+  else
+    PS1+="\n${PROMPTCOL}"
+  fi
+
+  # Second line of bash prompt
+  PS1+="[\u@\h: \t]${RESET}${PROMPTCOL} \w${RESET}\n"
+
+  # Print out the last exit code, if it wasn't zero
+  if [ $EXIT != 0 ]; then
+    PS1+="${RED}[${EXIT}]${RESET} "
+  fi
+
+  # Finally print out a $ or #, depending on uid
+  PS1+="${PROMPTCOL}\\$ ${RESET}"
+}
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+  export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then
+  export TERM=xterm-256color
+fi
+
+export PROMPT_COMMAND=__prompt_command  # Func to gen PS1 after CMDs

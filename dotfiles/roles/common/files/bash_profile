@@ -1,0 +1,39 @@
+# vim: set filetype=sh :
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
+
+# Set a restrictive umask
+umask 0077
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+shopt -s checkwinsize
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+if [ -e "$HOME/.ssh/config" ]; then
+  complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh cs
+fi
+
+# If possible, add tab completion for many more commands
+if [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion
+fi
+
+# vi mode in bash
+set -o vi

@@ -1,0 +1,18 @@
+---
+- name: 'Put the .bashrc file in place'
+  copy:
+    src: 'bashrc'
+    dest: '~/.bashrc'
+    mode: '0600'
+
+- name: 'Put the .bash_profile file in place'
+  copy:
+    src: 'bash_profile'
+    dest: '~/.bash_profile'
+    mode: '0600'
+
+- name: 'Put the .bash_prompt file in place'
+  copy:
+    src: 'bash_prompt'
+    dest: '~/.bash_prompt'
+    mode: '0600'
