@@ -1,0 +1,6 @@
+---
+- name: 'Create the ~/.ssh directory'
+  file:
+    path: '~/.ssh'
+    state: 'directory'
+    mode: '0700'

@@ -1,0 +1,8 @@
+---
+- name: 'Ensure we can connect to this host'
+  ping:
+- include: ssh.yml
+- include: config.yml
+- include: github.yml
+- include: personal.yml
+- include: work.yml
