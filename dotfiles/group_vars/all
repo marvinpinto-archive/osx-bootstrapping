@@ -18,3 +18,5 @@ bash_managed_files:
 
 bin_managed_files:
   - 'colorssh'
+
+umask: '0077'
