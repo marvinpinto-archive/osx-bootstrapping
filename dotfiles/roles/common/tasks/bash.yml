@@ -11,6 +11,12 @@
     dest: '~/.bash_profile'
     mode: '0600'
 
+- name: 'Put the .bash_logout file in place'
+  copy:
+    src: 'bash_logout'
+    dest: '~/.bash_logout'
+    mode: '0600'
+
 - name: 'Put the ~/.bash/0-bash_prompt file in place'
   copy:
     src: 'bash_prompt'

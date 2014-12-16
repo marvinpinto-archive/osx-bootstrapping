@@ -1,0 +1,9 @@
+# vim: set filetype=sh :
+# ~/.bash_logout: executed by bash(1) when login shell exits.
+
+# when leaving the console clear a bunch of things
+if [ "$SHLVL" = 1 ]; then
+  history -c
+  cat /dev/null > ~/.bash_history
+  [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
+fi
