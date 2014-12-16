@@ -6,8 +6,8 @@
     mode: '0600'
 
 - name: 'Put the .bash_profile file in place'
-  copy:
-    src: 'bash_profile'
+  template:
+    src: 'bash_profile.j2'
     dest: '~/.bash_profile'
     mode: '0600'
 
