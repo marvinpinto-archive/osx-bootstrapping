@@ -1,3 +1,4 @@
+# vim: set filetype=yaml :
 ---
 ansible_connection: 'ssh'
 ansible_ssh_user: 'vagrant'
