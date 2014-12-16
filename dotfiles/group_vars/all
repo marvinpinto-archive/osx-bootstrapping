@@ -13,3 +13,5 @@ exports_managed_files:
 
 bash_managed_files:
   - '0-bash_prompt'
+
+bin_managed_files:

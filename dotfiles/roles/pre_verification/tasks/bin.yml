@@ -1,0 +1,6 @@
+---
+- name: 'Create the ~/bin directory'
+  file:
+    path: '~/bin'
+    state: 'directory'
+    mode: '0700'

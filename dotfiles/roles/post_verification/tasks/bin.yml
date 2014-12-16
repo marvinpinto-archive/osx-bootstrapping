@@ -1,0 +1,11 @@
+---
+- shell: 'ls -1 ~/bin'
+  register: contents
+  changed_when: False
+
+- name: 'Ensure that the bin directory contains nothing else'
+  file:
+    name: "~/bin/{{ item }}"
+    state: 'absent'
+  with_items: contents.stdout_lines
+  when: item not in bin_managed_files
