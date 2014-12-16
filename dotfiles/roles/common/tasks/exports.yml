@@ -1,6 +1,6 @@
 ---
-- name: 'Put the ~/.exports/exports file in place'
+- name: 'Put the ~/.exports/0-exports file in place'
   copy:
     src: 'exports'
-    dest: '~/.exports/exports'
+    dest: '~/.exports/0-exports'
     mode: '0600'
