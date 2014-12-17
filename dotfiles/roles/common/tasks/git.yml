@@ -4,21 +4,25 @@
     src: 'gitignore_global'
     dest: '~/.gitignore_global'
     mode: '0600'
+    force: 'yes'
 
 - name: 'Put the .gitconfig file in place'
   copy:
     src: 'gitconfig'
     dest: '~/.gitconfig'
     mode: '0600'
+    force: 'yes'
 
 - name: 'Put the ~/.aliases/1-git_aliases file in place'
   copy:
     src: 'git_aliases'
     dest: '~/.aliases/1-git_aliases'
     mode: '0600'
+    force: 'yes'
 
 - name: 'Put the ~/.functions/1-git_functions file in place'
   copy:
     src: 'git_functions'
     dest: '~/.functions/1-git_functions'
     mode: '0600'
+    force: 'yes'

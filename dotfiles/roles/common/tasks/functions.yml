@@ -4,3 +4,4 @@
     src: 'functions'
     dest: '~/.functions/0-functions'
     mode: '0600'
+    force: 'yes'

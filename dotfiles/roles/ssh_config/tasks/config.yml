@@ -4,3 +4,4 @@
     src: 'ssh_config.j2'
     dest: '~/.ssh/config'
     mode: '0444'
+    force: 'yes'

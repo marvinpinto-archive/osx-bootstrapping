@@ -4,3 +4,4 @@
     src: 'aliases'
     dest: '~/.aliases/0-aliases'
     mode: '0600'
+    force: 'yes'

@@ -4,3 +4,4 @@
     src: 'aliases'
     dest: '~/.aliases/2-osx_aliases'
     mode: '0600'
+    force: 'yes'

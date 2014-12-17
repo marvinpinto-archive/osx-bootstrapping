@@ -4,3 +4,4 @@
     src: 'bash_profile'
     dest: '~/.bash/2-bash_profile_osx'
     mode: '0600'
+    force: 'yes'

@@ -4,15 +4,17 @@
     path: '~/tmp'
     state: 'directory'
     mode: '0700'
+    force: 'yes'
 
 - name: 'Put the .vimrc file in place'
   copy:
     src: 'vimrc'
     dest: '~/.vimrc'
     mode: '0600'
+    force: 'yes'
 
 - name: 'Copy the .vim directory'
   synchronize:
-    src: 'vim/'
+    src: "{{ playbook_dir }}/roles/common/files/vim/"
     dest: '~/.vim'
     delete: 'yes'

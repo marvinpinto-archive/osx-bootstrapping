@@ -4,3 +4,4 @@
     src: 'exports'
     dest: '~/.exports/0-exports'
     mode: '0600'
+    force: 'yes'

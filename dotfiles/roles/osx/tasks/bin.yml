@@ -4,3 +4,4 @@
     src: 'colorssh'
     dest: '~/bin/colorssh'
     mode: '0700'
+    force: 'yes'

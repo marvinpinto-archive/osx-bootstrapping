@@ -1,0 +1,9 @@
+---
+- hosts: osx
+  connection: local
+  roles:
+    - pre_verification
+    - common
+    - osx
+    - ssh_config
+    - post_verification
