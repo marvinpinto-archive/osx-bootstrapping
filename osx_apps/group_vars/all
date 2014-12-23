@@ -1,5 +1,9 @@
 # vim: set filetype=yaml :
 ---
+
+# rbenv_version also needs to be updated in dotfiles/group_vars/all
+rbenv_version: '2.1.5'
+
 homebrew_taps:
   - 'homebrew/dupes'
   - 'caskroom/cask'

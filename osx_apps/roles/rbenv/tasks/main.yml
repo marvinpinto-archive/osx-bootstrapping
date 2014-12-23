@@ -12,7 +12,7 @@
     name: 'ruby-build'
     state: 'latest'
 
-- name: 'Install ruby 2.1.5'
-  shell: '/usr/local/bin/rbenv install -s 2.1.5'
+- name: "Install ruby {{ rbenv_version }}"
+  shell: "/usr/local/bin/rbenv install -s {{ rbenv_version }}"
   register: install_result
   changed_when: 'install_result.stderr'

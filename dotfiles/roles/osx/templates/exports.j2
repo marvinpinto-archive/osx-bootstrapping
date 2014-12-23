@@ -1,7 +1,7 @@
 # vim: set filetype=sh :
 
-# Use rbenv with ruby versoin 2.1.5
-export RBENV_VERSION="2.1.5"
+# Use rbenv with ruby version {{ rbenv_version }}
+export RBENV_VERSION="{{ rbenv_version }}"
 
 # Override the path to add the rbenv shims
 export PATH="${HOME}/.rbenv/shims:$PATH"

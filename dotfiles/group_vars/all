@@ -1,5 +1,9 @@
 # vim: set filetype=yaml :
 ---
+
+# rbenv_version also needs to be updated in osx_apps/group_vars/all
+rbenv_version: '2.1.5'
+
 aliases_managed_files:
   - '0-aliases'
   - '1-git_aliases'
