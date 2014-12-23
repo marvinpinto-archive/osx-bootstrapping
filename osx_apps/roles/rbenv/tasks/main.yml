@@ -1,0 +1,18 @@
+---
+- name: 'Ensure we can connect to this host'
+  ping:
+
+- name: 'Install rbenv'
+  homebrew:
+    name: 'rbenv'
+    state: 'latest'
+
+- name: 'Install ruby-build'
+  homebrew:
+    name: 'ruby-build'
+    state: 'latest'
+
+- name: 'Install ruby 2.1.5'
+  shell: '/usr/local/bin/rbenv install -s 2.1.5'
+  register: install_result
+  changed_when: 'install_result.stderr'
