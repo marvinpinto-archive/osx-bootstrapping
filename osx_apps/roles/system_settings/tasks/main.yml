@@ -3,3 +3,4 @@
   ping:
 - include: hostname.yml
 - include: audio.yml
+- include: user_interface.yml
