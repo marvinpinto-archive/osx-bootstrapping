@@ -1,0 +1,8 @@
+---
+- name: 'Ensure we can connect to this host'
+  ping:
+
+- name: 'Update homebrew'
+  homebrew:
+    update_homebrew: 'yes'
+    upgrade_all: 'yes'
