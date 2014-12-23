@@ -1,0 +1,7 @@
+---
+- name: 'Put the ~/.exports/1-exports file in place'
+  copy:
+    src: 'exports'
+    dest: '~/.exports/1-exports'
+    mode: '0600'
+    force: 'yes'
