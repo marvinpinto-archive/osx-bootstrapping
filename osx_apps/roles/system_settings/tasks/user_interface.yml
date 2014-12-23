@@ -4,7 +4,7 @@
   changed_when: False
 
 - name: 'Set the highlight color to green'
-  command: '/usr/bin/defaults read NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"'
+  command: '/usr/bin/defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"'
   when: '"0.764700 0.976500 0.568600" != highlight_color_output.stdout'
 
 - command: '/usr/bin/defaults read NSGlobalDomain NSTableViewDefaultSizeMode'
