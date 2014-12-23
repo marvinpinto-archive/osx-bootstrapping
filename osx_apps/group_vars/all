@@ -1,0 +1,30 @@
+# vim: set filetype=yaml :
+---
+homebrew_taps:
+  - 'homebrew/dupes'
+  - 'caskroom/cask'
+  - 'homebrew/completions'
+
+homebrew_packages:
+  - 'git'
+  - 'coreutils'
+  - 'findutils'
+  - 'bash'
+  - 'wget'
+  - 'tmux'
+  - 'vim'
+  - 'ack'
+  - 'imagemagick'
+  - 'lynx'
+  - 'tree'
+  - 'webkit2png'
+  - 'pass'
+  - 'htop'
+  - 'bash-completion'
+  - 'apg'
+  - 'reattach-to-user-namespace'
+  - 'ansible'
+  - 'rsync'
+  - 'grep'
+  - 'vagrant-completion'
+  - 'brew-cask'
