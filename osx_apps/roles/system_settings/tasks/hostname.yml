@@ -9,7 +9,7 @@
   changed_when: False
 
 - name: 'Set the OSX ComputerName'
-  command: 'scutil --set ComputerName "{{ osxhostname }}"'
+  command: '/usr/sbin/scutil --set ComputerName "{{ osxhostname }}"'
   sudo: 'yes'
   when: '"{{ osxhostname }}" != computername_contents.stdout'
 
@@ -22,7 +22,7 @@
   changed_when: False
 
 - name: 'Set the OSX HostName'
-  command: 'scutil --set HostName "{{ osxhostname }}"'
+  command: '/usr/sbin/scutil --set HostName "{{ osxhostname }}"'
   sudo: 'yes'
   when: '"{{ osxhostname }}" != hostname_contents.stdout'
 
@@ -34,6 +34,6 @@
   changed_when: False
 
 - name: 'Set the OSX LocalHostName'
-  command: 'scutil --set LocalHostName "{{ osxhostname }}"'
+  command: '/usr/sbin/scutil --set LocalHostName "{{ osxhostname }}"'
   sudo: 'yes'
   when: '"{{ osxhostname }}" != localhostname_contents.stdout'
