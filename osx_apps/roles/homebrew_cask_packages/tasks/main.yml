@@ -1,0 +1,14 @@
+---
+- name: 'Ensure we can connect to this host'
+  ping:
+
+- name: 'Install homebrew cask packages'
+  homebrew_cask:
+    name: "{{ item }}"
+    state: 'installed'
+  with_items: 'homebrew_cask_packages'
+
+- name: 'brew cask cleanup'
+  shell: '/usr/local/bin/brew cask cleanup'
+  register: command_result
+  changed_when: "'dmg' in command_result.stdout"

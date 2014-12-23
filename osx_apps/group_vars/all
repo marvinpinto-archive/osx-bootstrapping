@@ -28,3 +28,14 @@ homebrew_packages:
   - 'grep'
   - 'vagrant-completion'
   - 'brew-cask'
+
+homebrew_cask_packages:
+  - 'divvy'
+  - 'dropbox'
+  - 'google-chrome'
+  - 'iterm2'
+  - 'virtualbox'
+  - 'firefox'
+  - 'silverlight'
+  - 'vagrant'
+  - 'garmin-express'
