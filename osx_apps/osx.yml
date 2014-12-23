@@ -1,0 +1,8 @@
+---
+- hosts: osx
+  connection: local
+  roles:
+    - 'update_homebrew'
+    - 'rbenv'
+    - 'homebrew_packages'
+    - 'homebrew_cask_packages'
