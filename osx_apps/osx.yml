@@ -1,0 +1,12 @@
+---
+
+- hosts: osx
+  connection: local
+  vars:
+    osxhostname: "{{ computername }}"
+  roles:
+    - 'update_homebrew'
+    - 'rbenv'
+    - 'homebrew_packages'
+    - 'homebrew_cask_packages'
+    - 'system_settings'

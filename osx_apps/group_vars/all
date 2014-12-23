@@ -1,0 +1,45 @@
+# vim: set filetype=yaml :
+---
+
+# rbenv_version also needs to be updated in dotfiles/group_vars/all
+rbenv_version: '2.1.5'
+
+homebrew_taps:
+  - 'homebrew/dupes'
+  - 'caskroom/cask'
+  - 'homebrew/completions'
+
+homebrew_packages:
+  - 'git'
+  - 'coreutils'
+  - 'findutils'
+  - 'bash'
+  - 'wget'
+  - 'tmux'
+  - 'vim'
+  - 'ack'
+  - 'imagemagick'
+  - 'lynx'
+  - 'tree'
+  - 'webkit2png'
+  - 'pass'
+  - 'htop'
+  - 'bash-completion'
+  - 'apg'
+  - 'reattach-to-user-namespace'
+  - 'ansible'
+  - 'rsync'
+  - 'grep'
+  - 'vagrant-completion'
+  - 'brew-cask'
+
+homebrew_cask_packages:
+  - 'divvy'
+  - 'dropbox'
+  - 'google-chrome'
+  - 'iterm2'
+  - 'virtualbox'
+  - 'firefox'
+  - 'silverlight'
+  - 'vagrant'
+  - 'garmin-express'

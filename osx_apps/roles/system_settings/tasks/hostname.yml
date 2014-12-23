@@ -1,0 +1,39 @@
+---
+# ComputerName is the so-called "user-friendly" name for the Mac, it's what
+# will show up on the Mac itself and what will be visible to others when
+# connecting to it over a local network. This is also whats visible under the
+# Sharing preference panel.
+- command: '/usr/sbin/scutil --get ComputerName'
+  sudo: 'yes'
+  register: computername_contents
+  changed_when: False
+
+- name: 'Set the OSX ComputerName'
+  command: 'scutil --set ComputerName "{{ osxhostname }}"'
+  sudo: 'yes'
+  when: '"{{ osxhostname }}" != computername_contents.stdout'
+
+# HostName is the name assigned to the computer as visible from the command
+# line, and it's also used by local and remote networks when connecting through
+# SSH and Remote Login.
+- command: '/usr/sbin/scutil --get HostName'
+  sudo: 'yes'
+  register: hostname_contents
+  changed_when: False
+
+- name: 'Set the OSX HostName'
+  command: 'scutil --set HostName "{{ osxhostname }}"'
+  sudo: 'yes'
+  when: '"{{ osxhostname }}" != hostname_contents.stdout'
+
+# LocalHostName is the name identifier used by Bonjour and visible through file
+# sharing services like AirDrop
+- command: '/usr/sbin/scutil --get LocalHostName'
+  sudo: 'yes'
+  register: localhostname_contents
+  changed_when: False
+
+- name: 'Set the OSX LocalHostName'
+  command: 'scutil --set LocalHostName "{{ osxhostname }}"'
+  sudo: 'yes'
+  when: '"{{ osxhostname }}" != localhostname_contents.stdout'

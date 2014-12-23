@@ -4,3 +4,4 @@
 - include: bin.yml
 - include: aliases.yml
 - include: bash.yml
+- include: exports.yml

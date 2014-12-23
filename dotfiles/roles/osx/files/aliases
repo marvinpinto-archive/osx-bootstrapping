@@ -28,3 +28,6 @@ alias cs="${HOME}/bin/colorssh"
 
 # APG alias for friendly passwords
 alias apgf='apg -a 0 -n 10 -m 10 -t -E lI10O -M NCSL'
+
+# Use the vim that comes with homebrew
+alias vi="/usr/local/bin/vim"

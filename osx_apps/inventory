@@ -1,0 +1,2 @@
+[osx]
+localhost ansible_connection=local
