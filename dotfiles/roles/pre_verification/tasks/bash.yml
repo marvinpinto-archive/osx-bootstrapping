@@ -4,3 +4,4 @@
     path: '~/.bash'
     state: 'directory'
     mode: '0700'
+    force: 'yes'
