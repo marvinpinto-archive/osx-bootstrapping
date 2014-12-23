@@ -2,3 +2,4 @@
 - name: 'Ensure we can connect to this host'
   ping:
 - include: hostname.yml
+- include: audio.yml
