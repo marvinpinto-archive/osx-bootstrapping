@@ -6,3 +6,11 @@
 - name: 'Enable highlight hover effect for the grid view of a stack'
   command: '/usr/bin/defaults write com.apple.dock "mouse-over-hilite-stack" -int 1'
   when: '"1" != command_output.stdout'
+
+# Set the icon size of Dock items to 36 pixels
+- command: '/usr/bin/defaults read com.apple.dock "tilesize"'
+  register: command_output
+  changed_when: False
+- name: 'Set the icon size of Dock items to 36 pixels'
+  command: '/usr/bin/defaults write com.apple.dock "tilesize" -int 36'
+  when: '"36" != command_output.stdout'
