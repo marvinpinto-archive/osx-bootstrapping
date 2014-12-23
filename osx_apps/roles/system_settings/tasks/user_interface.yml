@@ -1,16 +1,16 @@
 ---
+# Set the highlight color to green
 - command: '/usr/bin/defaults read NSGlobalDomain AppleHighlightColor'
   register: highlight_color_output
   changed_when: False
-
 - name: 'Set the highlight color to green'
   command: '/usr/bin/defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"'
   when: '"0.764700 0.976500 0.568600" != highlight_color_output.stdout'
 
+# Set the sidebar icon size to medium
 - command: '/usr/bin/defaults read NSGlobalDomain NSTableViewDefaultSizeMode'
   register: command_output
   changed_when: False
-
 - name: 'Set the sidebar icon size to medium'
   command: '/usr/bin/defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2'
   when: '"2" != command_output.stdout'
