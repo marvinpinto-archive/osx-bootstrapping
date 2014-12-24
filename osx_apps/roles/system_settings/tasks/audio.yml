@@ -1,8 +1,7 @@
 ---
-- command: '/usr/bin/defaults read com.apple.systemsound "com.apple.sound.uiaudio.enabled"'
-  register: command_output
-  changed_when: False
-
 - name: 'Disable system UI sound effects'
-  command: '/usr/bin/defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0'
-  when: '"0" != command_output.stdout'
+  osx_defaults:
+    domain: 'com.apple.systemsound'
+    key: 'com.apple.sound.uiaudio.enabled'
+    key_type: 'int'
+    value: '0'
