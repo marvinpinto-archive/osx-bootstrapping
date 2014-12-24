@@ -1,11 +1,10 @@
 ---
-# Enable highlight hover effect for the grid view of a stack
-- command: '/usr/bin/defaults read com.apple.dock "mouse-over-hilite-stack"'
-  register: command_output
-  changed_when: False
 - name: 'Enable highlight hover effect for the grid view of a stack'
-  command: '/usr/bin/defaults write com.apple.dock "mouse-over-hilite-stack" -int 1'
-  when: '"1" != command_output.stdout'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'mouse-over-hilite-stack'
+    key_type: 'int'
+    value: '1'
 
 # Set the icon size of Dock items to 36 pixels
 - command: '/usr/bin/defaults read com.apple.dock "tilesize"'
