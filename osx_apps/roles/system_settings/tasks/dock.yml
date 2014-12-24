@@ -6,10 +6,9 @@
     key_type: 'int'
     value: '1'
 
-# Set the icon size of Dock items to 36 pixels
-- command: '/usr/bin/defaults read com.apple.dock "tilesize"'
-  register: command_output
-  changed_when: False
 - name: 'Set the icon size of Dock items to 36 pixels'
-  command: '/usr/bin/defaults write com.apple.dock "tilesize" -int 36'
-  when: '"36" != command_output.stdout'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'tilesize'
+    key_type: 'int'
+    value: '36'
