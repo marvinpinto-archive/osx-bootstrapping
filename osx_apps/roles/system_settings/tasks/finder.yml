@@ -34,3 +34,17 @@
     key: 'com.apple.springing.delay'
     key_type: 'float'
     value: '0'
+
+- name: 'Enable spring loading for directories'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'com.apple.springing.enabled'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Disable the warning when changing a file extension'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'FXEnableExtensionChangeWarning'
+    key_type: 'int'
+    value: '0'
