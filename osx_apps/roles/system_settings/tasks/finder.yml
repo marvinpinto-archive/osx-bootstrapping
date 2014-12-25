@@ -20,3 +20,10 @@
     key: 'FXPreferredViewStyle'
     key_type: 'string'
     value: 'Nlsv'
+
+- name: 'Avoid creating .DS_Store files on network volumes'
+  osx_defaults:
+    domain: 'com.apple.desktopservices'
+    key: 'DSDontWriteNetworkStores'
+    key_type: 'int'
+    value: '1'
