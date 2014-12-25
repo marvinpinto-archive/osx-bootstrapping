@@ -68,3 +68,10 @@
     key: 'mru-spaces'
     key_type: 'int'
     value: '0'
+
+- name: 'Remove the auto-hiding Dock delay'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'autohide-delay'
+    key_type: 'float'
+    value: '0'
