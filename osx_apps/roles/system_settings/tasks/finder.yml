@@ -62,3 +62,10 @@
     key: 'ShowPathbar'
     key_type: 'int'
     value: '1'
+
+- name: 'Show the finder status bar'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowStatusBar'
+    key_type: 'int'
+    value: '1'
