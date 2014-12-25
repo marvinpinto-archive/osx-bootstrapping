@@ -33,3 +33,10 @@
     key: 'launchanim'
     key_type: 'int'
     value: '0'
+
+- name: 'Speed up Mission Control animations'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'expose-animation-duration'
+    key_type: 'float'
+    value: '0.1'
