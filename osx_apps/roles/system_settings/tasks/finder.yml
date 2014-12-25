@@ -48,3 +48,10 @@
     key: 'FXEnableExtensionChangeWarning'
     key_type: 'int'
     value: '0'
+
+- name: 'Display full POSIX path as Finder window title'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: '_FXShowPosixPathInTitle'
+    key_type: 'int'
+    value: '1'
