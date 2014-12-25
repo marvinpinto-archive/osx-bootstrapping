@@ -76,3 +76,10 @@
     key: 'AppleShowAllExtensions'
     key_type: 'int'
     value: '1'
+
+- name: 'Disable window animations and Get Info animations'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'DisableAllAnimations'
+    key_type: 'int'
+    value: '1'
