@@ -13,11 +13,10 @@
     key_type: 'int'
     value: '2'
 
-# Always show scrollbars
 # Possible values are: 'WhenScrolling', 'Automatic', and 'Always'
-- command: '/usr/bin/defaults read NSGlobalDomain AppleShowScrollBars'
-  register: command_output
-  changed_when: False
 - name: 'Always show scrollbars'
-  command: '/usr/bin/defaults write NSGlobalDomain AppleShowScrollBars -string "Always"'
-  when: '"Always" != command_output.stdout'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleShowScrollBars'
+    key_type: 'string'
+    value: 'Always'
