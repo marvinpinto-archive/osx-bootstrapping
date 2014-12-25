@@ -11,15 +11,10 @@
 # HostName is the name assigned to the computer as visible from the command
 # line, and it's also used by local and remote networks when connecting through
 # SSH and Remote Login.
-- command: '/usr/sbin/scutil --get HostName'
-  sudo: 'yes'
-  register: hostname_contents
-  changed_when: False
-
 - name: 'Set the OSX HostName'
-  command: '/usr/sbin/scutil --set HostName "{{ osxhostname }}"'
-  sudo: 'yes'
-  when: '"{{ osxhostname }}" != hostname_contents.stdout'
+  osx_scutil:
+    key: 'HostName'
+    value: "{{ osxhostname }}"
 
 # LocalHostName is the name identifier used by Bonjour and visible through file
 # sharing services like AirDrop
