@@ -70,7 +70,7 @@ def update_value(module, domain, key, key_type, value):
     if not needs_update(module, domain, key, value):
         return False
     if not module.check_mode:
-        cmd = '/usr/bin/defaults write %s "%s" -%s %s' % (domain, key, key_type, value)
+        cmd = '/usr/bin/defaults write %s "%s" -%s "%s"' % (domain, key, key_type, value)
         rc, stdout, stderr = module.run_command(cmd, check_rc=True)
     return True
 
