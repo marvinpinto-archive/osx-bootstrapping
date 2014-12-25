@@ -12,3 +12,11 @@
     key: 'WarnOnEmptyTrash'
     key_type: 'int'
     value: '0'
+
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+- name: 'Use list view in all Finder windows by default'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'FXPreferredViewStyle'
+    key_type: 'string'
+    value: 'Nlsv'
