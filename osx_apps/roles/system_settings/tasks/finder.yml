@@ -69,3 +69,10 @@
     key: 'ShowStatusBar'
     key_type: 'int'
     value: '1'
+
+- name: 'Show the filename extensions'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleShowAllExtensions'
+    key_type: 'int'
+    value: '1'
