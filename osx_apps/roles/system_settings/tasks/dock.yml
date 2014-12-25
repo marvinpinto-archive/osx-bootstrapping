@@ -75,3 +75,10 @@
     key: 'autohide-delay'
     key_type: 'float'
     value: '0'
+
+- name: 'Remove the animation when hiding/showing the Dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'autohide-time-modifier'
+    key_type: 'float'
+    value: '0'
