@@ -27,3 +27,10 @@
     key: 'DSDontWriteNetworkStores'
     key_type: 'int'
     value: '1'
+
+- name: 'Remove the spring loading delay for directories'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'com.apple.springing.delay'
+    key_type: 'float'
+    value: '0'
