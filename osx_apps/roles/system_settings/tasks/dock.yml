@@ -19,3 +19,10 @@
     key: 'minimize-to-application'
     key_type: 'int'
     value: '1'
+
+- name: 'Enable spring loading for all Dock items'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'enable-spring-load-actions-on-all-items'
+    key_type: 'int'
+    value: '1'
