@@ -3,15 +3,10 @@
 # will show up on the Mac itself and what will be visible to others when
 # connecting to it over a local network. This is also whats visible under the
 # Sharing preference panel.
-- command: '/usr/sbin/scutil --get ComputerName'
-  sudo: 'yes'
-  register: computername_contents
-  changed_when: False
-
 - name: 'Set the OSX ComputerName'
-  command: '/usr/sbin/scutil --set ComputerName "{{ osxhostname }}"'
-  sudo: 'yes'
-  when: '"{{ osxhostname }}" != computername_contents.stdout'
+  osx_scutil:
+    key: 'ComputerName'
+    value: "{{ osxhostname }}"
 
 # HostName is the name assigned to the computer as visible from the command
 # line, and it's also used by local and remote networks when connecting through
