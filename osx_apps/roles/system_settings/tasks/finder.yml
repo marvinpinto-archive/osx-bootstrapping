@@ -5,3 +5,10 @@
     key: 'EmptyTrashSecurely'
     key_type: 'int'
     value: '1'
+
+- name: 'Disable the warning before emptying the Trash'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'WarnOnEmptyTrash'
+    key_type: 'int'
+    value: '0'
