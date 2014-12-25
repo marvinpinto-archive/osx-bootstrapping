@@ -61,3 +61,10 @@
     key: 'dashboard-in-overlay'
     key_type: 'int'
     value: '1'
+
+- name: 'Don’t automatically rearrange Spaces based on most recent use'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'mru-spaces'
+    key_type: 'int'
+    value: '0'
