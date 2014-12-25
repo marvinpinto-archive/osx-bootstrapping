@@ -18,12 +18,7 @@
 
 # LocalHostName is the name identifier used by Bonjour and visible through file
 # sharing services like AirDrop
-- command: '/usr/sbin/scutil --get LocalHostName'
-  sudo: 'yes'
-  register: localhostname_contents
-  changed_when: False
-
 - name: 'Set the OSX LocalHostName'
-  command: '/usr/sbin/scutil --set LocalHostName "{{ osxhostname }}"'
-  sudo: 'yes'
-  when: '"{{ osxhostname }}" != localhostname_contents.stdout'
+  osx_scutil:
+    key: 'LocalHostName'
+    value: "{{ osxhostname }}"
