@@ -12,3 +12,10 @@
     key: 'tilesize'
     key_type: 'int'
     value: '36'
+
+- name: 'Minimize windows into their application’s icon'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'minimize-to-application'
+    key_type: 'int'
+    value: '1'
