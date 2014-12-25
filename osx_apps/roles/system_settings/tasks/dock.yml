@@ -26,3 +26,10 @@
     key: 'enable-spring-load-actions-on-all-items'
     key_type: 'int'
     value: '1'
+
+- name: 'Don’t animate opening applications from the Dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'launchanim'
+    key_type: 'int'
+    value: '0'
