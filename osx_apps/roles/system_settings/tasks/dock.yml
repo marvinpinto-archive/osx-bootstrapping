@@ -40,3 +40,10 @@
     key: 'expose-animation-duration'
     key_type: 'float'
     value: '0.1'
+
+- name: 'Don’t group windows by application in Mission Control'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'expose-group-by-app'
+    key_type: 'bool'
+    value: '0'
