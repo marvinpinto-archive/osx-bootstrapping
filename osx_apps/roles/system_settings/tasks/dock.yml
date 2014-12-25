@@ -82,3 +82,10 @@
     key: 'autohide-time-modifier'
     key_type: 'float'
     value: '0'
+
+- name: 'Automatically hide and show the Dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'autohide'
+    key_type: 'int'
+    value: '1'
