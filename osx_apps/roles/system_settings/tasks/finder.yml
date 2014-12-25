@@ -83,3 +83,10 @@
     key: 'DisableAllAnimations'
     key_type: 'int'
     value: '1'
+
+- name: 'Allow quitting via cmd+Q - doing so will also hide desktop icons'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'QuitMenuItem'
+    key_type: 'int'
+    value: '1'
