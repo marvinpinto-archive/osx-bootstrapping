@@ -47,3 +47,10 @@
     key: 'expose-group-by-app'
     key_type: 'bool'
     value: '0'
+
+- name: 'Disable Dashboard'
+  osx_defaults:
+    domain: 'com.apple.dashboard'
+    key: 'mcx-disabled'
+    key_type: 'bool'
+    value: '1'
