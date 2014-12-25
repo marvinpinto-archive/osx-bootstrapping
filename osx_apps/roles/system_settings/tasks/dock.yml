@@ -45,12 +45,19 @@
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'expose-group-by-app'
-    key_type: 'bool'
+    key_type: 'int'
     value: '0'
 
 - name: 'Disable Dashboard'
   osx_defaults:
     domain: 'com.apple.dashboard'
     key: 'mcx-disabled'
-    key_type: 'bool'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Don’t show Dashboard as a Space'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'dashboard-in-overlay'
+    key_type: 'int'
     value: '1'
