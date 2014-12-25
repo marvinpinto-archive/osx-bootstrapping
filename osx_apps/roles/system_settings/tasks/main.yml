@@ -5,3 +5,4 @@
 - include: audio.yml
 - include: user_interface.yml
 - include: dock.yml
+- include: finder.yml

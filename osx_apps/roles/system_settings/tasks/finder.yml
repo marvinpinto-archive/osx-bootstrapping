@@ -1,0 +1,7 @@
+---
+- name: 'Empty Trash securely by default'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'EmptyTrashSecurely'
+    key_type: 'int'
+    value: '1'
