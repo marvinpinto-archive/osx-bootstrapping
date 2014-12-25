@@ -55,3 +55,10 @@
     key: '_FXShowPosixPathInTitle'
     key_type: 'int'
     value: '1'
+
+- name: 'Show the finder path bar'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowPathbar'
+    key_type: 'int'
+    value: '1'
