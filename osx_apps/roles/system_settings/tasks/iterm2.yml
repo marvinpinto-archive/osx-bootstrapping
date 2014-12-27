@@ -1,0 +1,407 @@
+---
+- name: 'Report the terminal type as xterm-256color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Terminal Type'"
+    key_type: 'string'
+    value: 'xterm-256color'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not hide the tab bar when there is only one tab'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'HideTab'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not open the profiles window on startup'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'OpenBookmark'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Quit when all windows are closed'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'QuitWhenAllWindowsClosed'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Confirm closing multiple sessions'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'OnlyWhenMoreTabs'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Confirm quit iterm2 cmd+Q command'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'PromptOnQuit'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Do not add bonjour hosts to profiles'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'EnableRendezvous'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not check for updates automatically'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'SUEnableAutomaticChecks'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not prompt for test release updates'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'CheckTestRelease'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Copy to clipboard on selection'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'CopySelection'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Copied text does not include trailing newline'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'CopyLastNewline'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Enable smart window placement'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'SmartPlacement'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Do not adjust window when changing font size'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'AdjustWindowForFontSizeChange'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not use lion style fullscreen windows'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'UseLionStyleFullscreen'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Set the tab style to metal'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'WindowStyle'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Set the tab position at the top'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'TabViewType'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Color tab labels on activity'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'HighlightTabLabels'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Do not hide the tab number and tab close button'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'UseCompactLabel'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not hide the tab activity indicator'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'HideActivityIndicator'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Show tabs in full screen'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'ShowFullScreenTabBar'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
+
+- name: 'Do not show the window number'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'WindowNumber'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not show the current job name'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'JobName'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not show the profile name'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'ShowBookmarkName'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Show a border around the window'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'UseBorder'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Hide the scrollbar and resize control'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'HideScrollbar'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Auto hide the menu bar when in non-lion fullscreen mode'
+  osx_defaults:
+    domain: 'com.googlecode.iterm2'
+    key: 'HideMenuBarInFullscreen'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Use the home directory as the working directory'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Custom Directory'"
+    key_type: 'string'
+    value: 'No'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Use the smart cursor color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Smart Cursor Color'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the minimum contrast to 0'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Minimum Contrast'"
+    key_type: 'real'
+    value: '0.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 187' (in RGB)
+- name: 'Set the R component of foreground color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Foreground Color':'Red Component'"
+    key_type: 'real'
+    value: '0.733333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 187' (in RGB)
+- name: 'Set the G component of foreground color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Foreground Color':'Green Component'"
+    key_type: 'real'
+    value: '0.733333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 187' (in RGB)
+- name: 'Set the B component of foreground color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Foreground Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.733333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 49' (in RGB)
+- name: 'Set the R component of background color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Background Color':'Red Component'"
+    key_type: 'real'
+    value: '0.192158'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 66' (in RGB)
+- name: 'Set the G component of background color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Background Color':'Green Component'"
+    key_type: 'real'
+    value: '0.258824'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 84' (in RGB)
+- name: 'Set the B component of background color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Background Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.329412'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 255' (in RGB)
+- name: 'Set the R component of bold color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Bold Color':'Red Component'"
+    key_type: 'real'
+    value: '1.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 255' (in RGB)
+- name: 'Set the G component of bold color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Bold Color':'Green Component'"
+    key_type: 'real'
+    value: '1.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 255' (in RGB)
+- name: 'Set the B component of bold color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Bold Color':'Blue Component'"
+    key_type: 'real'
+    value: '1.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 85' (in RGB)
+- name: 'Set the R component of selection color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selection Color':'Red Component'"
+    key_type: 'real'
+    value: '0.333333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 85' (in RGB)
+- name: 'Set the G component of selection color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selection Color':'Green Component'"
+    key_type: 'real'
+    value: '0.333333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 85' (in RGB)
+- name: 'Set the B component of selection color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selection Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.333333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 242' (in RGB)
+- name: 'Set the R component of selected text color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selected Text Color':'Red Component'"
+    key_type: 'real'
+    value: '0.949020'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 242' (in RGB)
+- name: 'Set the G component of selected text color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selected Text Color':'Green Component'"
+    key_type: 'real'
+    value: '0.949020'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 242' (in RGB)
+- name: 'Set the B component of selected text color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Selected Text Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.949020'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 0' (in RGB)
+- name: 'Set the R component of black/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 0 Color':'Red Component'"
+    key_type: 'real'
+    value: '0.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 0' (in RGB)
+- name: 'Set the G component of black/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 0 Color':'Green Component'"
+    key_type: 'real'
+    value: '0.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 0' (in RGB)
+- name: 'Set the B component of black/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 0 Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Bind cmd+h to previous tab (action)'
+  osx_plistbuddy:
+    key: ":'GlobalKeyMap':'0x68-0x100000':'Action'"
+    key_type: 'integer'
+    value: '2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    persist_domain: 'com.googlecode.iterm2'
+    force: 'yes'
+
+- name: 'Bind cmd+h to previous tab (text)'
+  osx_plistbuddy:
+    key: ":'GlobalKeyMap':'0x68-0x100000':'Text'"
+    key_type: 'string'
+    value: ''
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    persist_domain: 'com.googlecode.iterm2'
+    force: 'yes'
+
+- name: 'Bind cmd+l to next tab (action)'
+  osx_plistbuddy:
+    key: ":'GlobalKeyMap':'0x6c-0x100000':'Action'"
+    key_type: 'integer'
+    value: '0'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    persist_domain: 'com.googlecode.iterm2'
+    force: 'yes'
+
+- name: 'Bind cmd+l to next tab (text)'
+  osx_plistbuddy:
+    key: ":'GlobalKeyMap':'0x6c-0x100000':'Text'"
+    key_type: 'string'
+    value: ''
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    persist_domain: 'com.googlecode.iterm2'
+    force: 'yes'
+
