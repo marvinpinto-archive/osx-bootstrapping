@@ -647,3 +647,30 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 250' (in RGB)
+- name: 'Set the R component of magenta/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 5 Color':'Red Component'"
+    key_type: 'real'
+    value: '0.980392'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 37' (in RGB)
+- name: 'Set the G component of magenta/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 5 Color':'Green Component'"
+    key_type: 'real'
+    value: '0.145098'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 115' (in RGB)
+- name: 'Set the B component of magenta/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 5 Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.450980'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
