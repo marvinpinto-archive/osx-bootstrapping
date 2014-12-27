@@ -59,8 +59,11 @@ EXAMPLES = '''
 
 def get_value(module, domain, key):
     cmd = '/usr/bin/defaults read %s "%s"' % (domain, key)
-    rc, stdout, stderr = module.run_command(cmd, check_rc=True)
-    return stdout.strip()
+    rc, stdout, stderr = module.run_command(cmd, check_rc=False)
+    if rc:
+        return None
+    else:
+        return stdout.strip()
 
 def needs_update(current_value, expected_value):
     return not current_value == expected_value
@@ -78,6 +81,7 @@ def main():
             key=dict(required=True),
             key_type=dict(required=True),
             value=dict(required=True),
+            force=dict(default=False,choices=BOOLEANS),
         ),
         supports_check_mode=True
     )
@@ -89,8 +93,14 @@ def main():
     key = module.params['key']
     key_type = module.params['key_type']
     new_value = module.params['value']
+    force = module.boolean(module.params['force'])
 
     current_value = get_value(module, domain, key)
+
+    if (not force) and (current_value is None):
+        msg = '%s/%s does not exist and force not specified' % (domain, key)
+        module.fail_json(msg=msg)
+
     if needs_update(current_value, new_value):
         update_value(module, domain, key, key_type, new_value)
         msg = '%s updated from %s to %s' % (key, current_value, new_value)
