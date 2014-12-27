@@ -817,3 +817,75 @@
     value: '2'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not allow blinking text'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Blink Allowed'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not allow italic text'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Use Italic Font'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Draw bold text in bold font'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Use Bold Font'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Draw bold text in bright colors'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Use Bright Bold'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Anti alias the regular font'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'ASCII Anti Aliased'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Use Monaco 12 as the regular font'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Normal Font'"
+    key_type: 'string'
+    value: 'Monaco 12'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Anti alias the non-ascii font'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Non-ASCII Anti Aliased'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Use Monaco 12 as the non-ascii font'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Non Ascii Font'"
+    key_type: 'string'
+    value: 'Monaco 12'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not treat ambiguous-width characters as double width'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ambiguous Double Width'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
