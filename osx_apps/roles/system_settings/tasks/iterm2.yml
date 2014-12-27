@@ -809,3 +809,11 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the cursor type to Box'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Cursor Type'"
+    key_type: 'int'
+    value: '2'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
