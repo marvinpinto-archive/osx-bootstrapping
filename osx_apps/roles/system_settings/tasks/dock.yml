@@ -1,5 +1,7 @@
 ---
 - name: 'Enable highlight hover effect for the grid view of a stack'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'mouse-over-hilite-stack'
@@ -7,6 +9,8 @@
     value: '1'
 
 - name: 'Set the icon size of Dock items to 36 pixels'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'tilesize'
@@ -14,6 +18,8 @@
     value: '36'
 
 - name: 'Minimize windows into their application’s icon'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'minimize-to-application'
@@ -21,6 +27,8 @@
     value: '1'
 
 - name: 'Enable spring loading for all Dock items'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'enable-spring-load-actions-on-all-items'
@@ -28,6 +36,8 @@
     value: '1'
 
 - name: 'Don’t animate opening applications from the Dock'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'launchanim'
@@ -35,6 +45,8 @@
     value: '0'
 
 - name: 'Speed up Mission Control animations'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'expose-animation-duration'
@@ -42,6 +54,8 @@
     value: '0.1'
 
 - name: 'Don’t group windows by application in Mission Control'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'expose-group-by-app'
@@ -49,6 +63,8 @@
     value: '0'
 
 - name: 'Disable Dashboard'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dashboard'
     key: 'mcx-disabled'
@@ -56,6 +72,8 @@
     value: '1'
 
 - name: 'Don’t show Dashboard as a Space'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'dashboard-in-overlay'
@@ -63,6 +81,8 @@
     value: '1'
 
 - name: 'Don’t automatically rearrange Spaces based on most recent use'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'mru-spaces'
@@ -70,6 +90,8 @@
     value: '0'
 
 - name: 'Remove the auto-hiding Dock delay'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'autohide-delay'
@@ -77,6 +99,8 @@
     value: '0'
 
 - name: 'Remove the animation when hiding/showing the Dock'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'autohide-time-modifier'
@@ -84,6 +108,8 @@
     value: '0'
 
 - name: 'Automatically hide and show the Dock'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'autohide'
@@ -91,8 +117,20 @@
     value: '1'
 
 - name: 'Make Dock icons of hidden applications translucent'
+  notify:
+    - 'restart dock'
   osx_defaults:
     domain: 'com.apple.dock'
     key: 'showhidden'
     key_type: 'int'
     value: '1'
+
+- name: 'Stop icons from bouncing in OS X Dock'
+  notify:
+    - 'restart dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'no-bouncing'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
