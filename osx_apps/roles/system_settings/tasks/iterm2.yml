@@ -1057,3 +1057,27 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Automatically close a session when it ends'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Close Sessions On End'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not prompt before closing'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Prompt Before Closing 2'"
+    key_type: 'int'
+    value: '0'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not send an ascii code when idle'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Send Code When Idle'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
