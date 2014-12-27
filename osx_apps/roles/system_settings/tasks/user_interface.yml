@@ -20,3 +20,12 @@
     key: 'AppleShowScrollBars'
     key_type: 'string'
     value: 'Always'
+
+- name: 'Set the desktop background'
+  notify:
+    - 'restart dock'
+  sqlite3:
+    database: '/Users/marvin/Library/Application Support/Dock/desktoppicture.db'
+    check_stmt: 'select * from data'
+    expected_check_output: '/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png'
+    update_stmt: 'update data set value = \"/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png\"'
