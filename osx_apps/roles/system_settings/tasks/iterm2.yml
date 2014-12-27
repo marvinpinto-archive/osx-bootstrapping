@@ -945,3 +945,115 @@
     value: '0'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not allow the terminal to report window title'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Allow Title Reporting'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the character encoding to UTF-8'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Character Encoding'"
+    key_type: 'int'
+    value: '4'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Disable session-initiated printing'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Disable Printing'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not disable save/restore alternate screen'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Disable Smcup Rmcup'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not enable xterm mouse reporting'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Mouse Reporting'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the number scrollback lines to 5000'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Scrollback Lines'"
+    key_type: 'int'
+    value: '5000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not save lines to scrollback when an app status bar is present'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Scrollback With Status Bar'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not save lines to scrollback in alternate screen mode'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Scrollback in Alternate Screen'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not use the experimental modern parser'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Use Canonical Parser'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not enable growl notifications'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'BM Growl'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not flash visual bell'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Flashing Bell'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set locale variables automatically'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Set Local Environment Vars'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Enabled the silence bell option'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Silence Bell'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not display the bell icon in tabs'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Visual Bell'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
