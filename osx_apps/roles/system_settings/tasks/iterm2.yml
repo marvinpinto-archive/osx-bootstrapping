@@ -620,3 +620,30 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'R: 85' (in RGB)
+- name: 'Set the R component of blue/bright color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 12 Color':'Red Component'"
+    key_type: 'real'
+    value: '0.333333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 85' (in RGB)
+- name: 'Set the G component of blue/bright color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 12 Color':'Green Component'"
+    key_type: 'real'
+    value: '0.333333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 255' (in RGB)
+- name: 'Set the B component of blue/bright color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 12 Color':'Blue Component'"
+    key_type: 'real'
+    value: '1.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
