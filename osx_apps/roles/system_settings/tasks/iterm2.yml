@@ -396,6 +396,33 @@
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
 
+# This roughly corresponds to 'R: 229' (in RGB)
+- name: 'Set the R component of red/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 1 Color':'Red Component'"
+    key_type: 'real'
+    value: '0.898039'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'G: 34' (in RGB)
+- name: 'Set the G component of red/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 1 Color':'Green Component'"
+    key_type: 'real'
+    value: '0.133333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+# This roughly corresponds to 'B: 34' (in RGB)
+- name: 'Set the B component of red/normal color'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Ansi 1 Color':'Blue Component'"
+    key_type: 'real'
+    value: '0.133333'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
 - name: 'Bind cmd+h to previous tab (action)'
   osx_plistbuddy:
     key: ":'GlobalKeyMap':'0x68-0x100000':'Action'"
