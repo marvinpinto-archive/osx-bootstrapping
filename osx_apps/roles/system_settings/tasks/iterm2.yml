@@ -889,3 +889,59 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the window transparency to opaque'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Transparency'"
+    key_type: 'real'
+    value: '0.000000'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Disable window blurring'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Blur'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the new window columns to 80'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Columns'"
+    key_type: 'int'
+    value: '80'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the new window rows to 25'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Rows'"
+    key_type: 'int'
+    value: '25'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Do not hide new windows after opening'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Hide After Opening'"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Disable session-initiated window resizing'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Disable Window Resizing'"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+
+- name: 'Set the window style to normal'
+  osx_plistbuddy:
+    key: ":'New Bookmarks':0:'Window Type'"
+    key_type: 'int'
+    value: '0'
+    persist_domain: 'com.googlecode.iterm2'
+    plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
