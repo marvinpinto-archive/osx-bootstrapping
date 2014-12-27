@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+plistbuddy = '/usr/libexec/plistbuddy'
+defaults = '/usr/bin/defaults'
+
 DOCUMENTATION = '''
 ---
 module: osx_defaults
@@ -57,52 +60,71 @@ EXAMPLES = '''
     value: '0'
 '''
 
-def get_value(module, domain, key):
-    cmd = '/usr/bin/defaults read %s "%s"' % (domain, key)
+def get_value(module, key, plist_file):
+    cmd = '%s -c "Print %s" %s' % (plistbuddy, key, plist_file)
     rc, stdout, stderr = module.run_command(cmd, check_rc=False)
     if rc:
         return None
-    else:
-        return stdout.strip()
+    return stdout.strip()
+
+def create_value(module, key, key_type, value, plist_file):
+    if not module.check_mode:
+        cmd = '%s -c "Add %s %s %s" %s' % (plistbuddy, key, key_type, value, plist_file)
+        rc, stdout, stderr = module.run_command(cmd, check_rc=True)
+
+def update_value(module, key, value, plist_file):
+    if not module.check_mode:
+        cmd = '%s -c "Set %s %s" %s' % (plistbuddy, key, value, plist_file)
+        rc, stdout, stderr = module.run_command(cmd, check_rc=True)
 
 def needs_update(current_value, expected_value):
     return not current_value == expected_value
 
-def update_value(module, domain, key, key_type, value):
+def persist_value(module, persist_domain):
+    # http://www.cnet.com/how-to/how-to-manually-edit-defaults-plist-files-in-mavericks
     if not module.check_mode:
-        cmd = '/usr/bin/defaults write %s "%s" -%s "%s"' % (domain, key, key_type, value)
+        cmd = '%s read "%s"' % (defaults, persist_domain)
         rc, stdout, stderr = module.run_command(cmd, check_rc=True)
 
 def main():
 
     module = AnsibleModule(
         argument_spec=dict(
-            domain=dict(required=True),
             key=dict(required=True),
             key_type=dict(required=True),
             value=dict(required=True),
+            plist_file=dict(required=True),
+            persist_domain=dict(required=True),
             force=dict(default=False,choices=BOOLEANS),
         ),
         supports_check_mode=True
     )
 
-    if not os.path.exists('/usr/bin/defaults'):
-        module.fail_json(msg='/usr/bin/defaults does not exist!')
+    for i in [defaults, plistbuddy]:
+        if not os.path.exists(i):
+            module.fail_json(msg='%s does not exist!' % i)
 
-    domain = module.params['domain']
     key = module.params['key']
     key_type = module.params['key_type']
     new_value = module.params['value']
+    plist_file = module.params['plist_file']
+    persist_domain = module.params['persist_domain']
     force = module.boolean(module.params['force'])
 
-    current_value = get_value(module, domain, key)
+    current_value = get_value(module, key, plist_file)
 
     if (not force) and (current_value is None):
-        msg = '%s/%s does not exist and force not specified' % (domain, key)
+        msg = '%s does not exist and force not specified' % key
         module.fail_json(msg=msg)
 
-    if needs_update(current_value, new_value):
-        update_value(module, domain, key, key_type, new_value)
+    if current_value is None:
+        create_value(module, key, key_type, new_value, plist_file)
+        persist_value(module, persist_domain)
+        msg = '%s successfully created' % key
+        changed_marker = True
+    elif needs_update(current_value, new_value):
+        update_value(module, key, new_value, plist_file)
+        persist_value(module, persist_domain)
         msg = '%s updated from %s to %s' % (key, current_value, new_value)
         changed_marker = True
     else:
