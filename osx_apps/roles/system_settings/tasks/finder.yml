@@ -106,3 +106,55 @@
     value: '80.000000'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+
+- name: 'Show item info near icons in desktop view'
+  osx_plistbuddy:
+    key: ":DesktopViewSettings:IconViewSettings:showItemInfo"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.apple.finder'
+    plist_file: '~/Library/Preferences/com.apple.finder.plist'
+
+- name: 'Show item info near icons in standard view'
+  osx_plistbuddy:
+    key: ":StandardViewSettings:IconViewSettings:showItemInfo"
+    key_type: 'bool'
+    value: 'true'
+    persist_domain: 'com.apple.finder'
+    plist_file: '~/Library/Preferences/com.apple.finder.plist'
+
+- name: 'Show item info to the right of the icons on the desktop'
+  osx_plistbuddy:
+    key: ":DesktopViewSettings:IconViewSettings:labelOnBottom"
+    key_type: 'bool'
+    value: 'false'
+    persist_domain: 'com.apple.finder'
+    plist_file: '~/Library/Preferences/com.apple.finder.plist'
+
+- name: 'Show icons for external hard drives on the desktop'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowExternalHardDrivesOnDesktop'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Show icons for hard drives on the desktop'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowHardDrivesOnDesktop'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Show icons for mounted servers on the desktop'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowMountedServersOnDesktop'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Show icons for removable media on the desktop'
+  osx_defaults:
+    domain: 'com.apple.finder'
+    key: 'ShowRemovableMediaOnDesktop'
+    key_type: 'int'
+    value: '1'
