@@ -29,3 +29,87 @@
     check_stmt: 'select * from data'
     expected_check_output: '/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png'
     update_stmt: 'update data set value = \"/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png\"'
+
+- name: 'Disable auto-correct'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'NSAutomaticSpellingCorrectionEnabled'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Set the locale to en_CA'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleLocale'
+    key_type: 'string'
+    value: 'en_CA@currency=CAD'
+
+- name: 'Set the measurement units to inches'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleMeasurementUnits'
+    key_type: 'string'
+    value: 'Inches'
+
+- name: 'Do not use metric units'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleMetricUnits'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Set a blazingly fast keyboard repeat rate'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'KeyRepeat'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Disable smart quotes'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'NSAutomaticQuoteSubstitutionEnabled'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Disable smart dashes'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'NSAutomaticDashSubstitutionEnabled'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Automatically quit the printer app once print jobs complete'
+  osx_defaults:
+    domain: 'com.apple.print.PrintingPrefs'
+    key: 'Quit When Finished'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Disable the "Are you sure you want to open this application?" dialog'
+  osx_defaults:
+    domain: 'com.apple.LaunchServices'
+    key: 'LSQuarantine'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Display ASCII control characters using caret notation in standard text views'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'NSTextShowsControlCharacters'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Disable the crash reporter'
+  osx_defaults:
+    domain: 'com.apple.CrashReporter'
+    key: 'DialogType'
+    key_type: 'string'
+    value: 'none'
+
+- name: 'Check for software updates daily, not just once per week'
+  osx_defaults:
+    domain: 'com.apple.SoftwareUpdate'
+    key: 'ScheduleFrequency'
+    key_type: 'int'
+    value: '1'

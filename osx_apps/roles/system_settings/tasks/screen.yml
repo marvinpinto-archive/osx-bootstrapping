@@ -1,0 +1,43 @@
+---
+- name: 'Enable subpixel font rendering on non-Apple LCDs'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleFontSmoothing'
+    key_type: 'int'
+    value: '2'
+
+- name: 'Disable shadow in screenshots'
+  osx_defaults:
+    domain: 'com.apple.screencapture'
+    key: 'disable-shadow'
+    key_type: 'int'
+    value: '1'
+
+# Other options: BMP, GIF, JPG, PDF, TIFF
+- name: 'Save screenshots in PNG format'
+  osx_defaults:
+    domain: 'com.apple.screencapture'
+    key: 'type'
+    key_type: 'string'
+    value: 'png'
+
+- name: 'Save screenshots to the ~/tmp directory'
+  osx_defaults:
+    domain: 'com.apple.screencapture'
+    key: 'location'
+    key_type: 'string'
+    value: '/Users/marvin/tmp'
+
+- name: 'Ask for the password immediately after sleep or screen saver begins'
+  osx_defaults:
+    domain: 'com.apple.screensaver'
+    key: 'askForPassword'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Set the ask delay to immediate'
+  osx_defaults:
+    domain: 'com.apple.screensaver'
+    key: 'askForPasswordDelay'
+    key_type: 'int'
+    value: '0'

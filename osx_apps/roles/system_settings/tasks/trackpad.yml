@@ -1,0 +1,222 @@
+---
+# Point and click settings
+
+# Tap to click
+- name: 'Enable tap to click (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'Clicking'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Enable tap to click (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'Clicking'
+    key_type: 'int'
+    value: '1'
+
+# Secondary click
+- name: 'Enable secondary click (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadRightClick'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Enable secondary click (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadRightClick'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Secondary click - click or tap with two fingers (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadCornerSecondaryClick'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Secondary click - click or tap with two fingers (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadCornerSecondaryClick'
+    key_type: 'int'
+    value: '0'
+
+# Look up
+- name: 'Disable lookup (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadThreeFingerTapGesture'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Disable lookup (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadThreeFingerTapGesture'
+    key_type: 'int'
+    value: '0'
+
+# Three finger drag
+- name: 'Enable three finger drag (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadThreeFingerDrag'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Enable three finger drag (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadThreeFingerDrag'
+    key_type: 'int'
+    value: '1'
+
+# Trackpad speed
+- name: 'Set the trackpad tracking speed to approx 5th notch'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'com.apple.trackpad.scaling'
+    key_type: 'float'
+    value: '0.875'
+
+# Scroll and Zoom settings
+- name: 'Disable natural scrolling'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'com.apple.swipescrolldirection'
+    key_type: 'int'
+    value: '0'
+
+# Zoom in or out
+- name: 'Pinch with two fingers to zoom in or out (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadPinch'
+    key_type: 'int'
+    value: '1'
+
+- name: 'Pinch with two fingers to zoom in or out (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadPinch'
+    key_type: 'int'
+    value: '1'
+
+# Smart zoom
+- name: 'Disable double tap with two fingers smart zoom (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadTwoFingerDoubleTapGesture'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Disable double tap with two fingers smart zoom (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadTwoFingerDoubleTapGesture'
+    key_type: 'int'
+    value: '0'
+
+# Rotate
+- name: 'Disable rotate with two fingers (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadRotate'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Disable rotate with two fingers (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadRotate'
+    key_type: 'int'
+    value: '0'
+
+# More Gestures Settings
+
+- name: 'Swipe left or right between pages with two fingers'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'AppleEnableSwipeNavigateWithScrolls'
+    key_type: 'int'
+    value: '1'
+
+# Swipe between full-screen apps
+- name: 'Swipe left or right with four fingers (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadFourFingerHorizSwipeGesture'
+    key_type: 'int'
+    value: '2'
+
+- name: 'Swipe left or right with four fingers (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadFourFingerHorizSwipeGesture'
+    key_type: 'int'
+    value: '2'
+
+# Notification center
+- name: 'Do not swipe left from the right edge with two fingers (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture'
+    key_type: 'int'
+    value: '0'
+
+- name: 'Do not swipe left from the right edge with two fingers (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadTwoFingerFromRightEdgeSwipeGesture'
+    key_type: 'int'
+    value: '0'
+
+# Mission Control
+- name: 'Allow swiping up with four fingers (built-in trackpad)'
+  osx_defaults:
+    domain: 'com.apple.AppleMultitouchTrackpad'
+    key: 'TrackpadFourFingerVertSwipeGesture'
+    key_type: 'int'
+    value: '2'
+
+- name: 'Allow swiping up with four fingers (bluetooth trackpad)'
+  osx_defaults:
+    domain: 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+    key: 'TrackpadFourFingerVertSwipeGesture'
+    key_type: 'int'
+    value: '2'
+
+- name: 'Enable the mission control gesture'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'showMissionControlGestureEnabled'
+    key_type: 'int'
+    value: '1'
+
+# App Expose
+- name: 'Disable the app expose gesture'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'showAppExposeGestureEnabled'
+    key_type: 'int'
+    value: '0'
+
+# Launchpad
+- name: 'Disable the launchpad gesture'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'showLaunchpadGestureEnabled'
+    key_type: 'int'
+    value: '0'
+
+# Show desktop
+- name: 'Disable the show desktop gesture'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'showDesktopGestureEnabled'
+    key_type: 'int'
+    value: '0'

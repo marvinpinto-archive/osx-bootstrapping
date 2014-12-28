@@ -1,0 +1,30 @@
+---
+- command: '/usr/sbin/systemsetup -gettimezone'
+  register: command_output
+  sudo: 'yes'
+  changed_when: False
+
+- name: 'Set the timezone to America/Toronto'
+  command: '/usr/sbin/systemsetup -settimezone "America/Toronto"'
+  sudo: 'yes'
+  when: 'not command_output.stdout == "Time Zone: America/Toronto"'
+
+- command: '/usr/sbin/systemsetup -getusingnetworktime'
+  register: command_output
+  sudo: 'yes'
+  changed_when: False
+
+- name: 'Use network time'
+  command: '/usr/sbin/systemsetup -setusingnetworktime on'
+  sudo: 'yes'
+  when: 'not command_output.stdout == "Network Time: On"'
+
+- command: '/usr/sbin/systemsetup -getnetworktimeserver'
+  register: command_output
+  sudo: 'yes'
+  changed_when: False
+
+- name: 'Set the network time server to time.apple.com'
+  command: '/usr/sbin/systemsetup -setnetworktimeserver time.apple.com'
+  sudo: 'yes'
+  when: 'not command_output.stdout == "Network Time Server: time.apple.com."'

@@ -7,3 +7,7 @@
 - include: dock.yml
 - include: finder.yml
 - include: iterm2.yml
+- include: time_machine.yml
+- include: screen.yml
+- include: time.yml
+- include: trackpad.yml

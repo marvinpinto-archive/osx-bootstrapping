@@ -4,6 +4,7 @@
 # connecting to it over a local network. This is also whats visible under the
 # Sharing preference panel.
 - name: 'Set the OSX ComputerName'
+  sudo: 'yes'
   osx_scutil:
     key: 'ComputerName'
     value: "{{ osxhostname }}"
@@ -12,6 +13,7 @@
 # line, and it's also used by local and remote networks when connecting through
 # SSH and Remote Login.
 - name: 'Set the OSX HostName'
+  sudo: 'yes'
   osx_scutil:
     key: 'HostName'
     value: "{{ osxhostname }}"
@@ -19,6 +21,7 @@
 # LocalHostName is the name identifier used by Bonjour and visible through file
 # sharing services like AirDrop
 - name: 'Set the OSX LocalHostName'
+  sudo: 'yes'
   osx_scutil:
     key: 'LocalHostName'
     value: "{{ osxhostname }}"
