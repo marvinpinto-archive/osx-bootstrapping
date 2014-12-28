@@ -9,3 +9,4 @@
 - include: iterm2.yml
 - include: time_machine.yml
 - include: screen.yml
+- include: time.yml
