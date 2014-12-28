@@ -10,3 +10,4 @@
 - include: time_machine.yml
 - include: screen.yml
 - include: time.yml
+- include: trackpad.yml
