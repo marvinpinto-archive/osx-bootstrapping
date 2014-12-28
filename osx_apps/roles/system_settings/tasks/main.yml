@@ -11,3 +11,4 @@
 - include: screen.yml
 - include: time.yml
 - include: trackpad.yml
+- include: divvy.yml

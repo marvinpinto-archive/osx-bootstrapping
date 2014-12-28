@@ -1,3 +1,11 @@
 ---
 - name: 'restart dock'
   command: /usr/bin/killall -HUP Dock
+
+- name: 'stop divvy'
+  command: /usr/bin/killall -KILL Divvy
+  ignore_errors: yes
+
+- name: 'start divvy'
+  command: '/usr/bin/open /opt/homebrew-cask/Caskroom/divvy/latest/Divvy.app'
+  ignore_errors: yes
