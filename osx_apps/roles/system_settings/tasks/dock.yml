@@ -134,3 +134,13 @@
     key_type: 'int'
     value: '1'
     force: 'yes'
+
+- name: 'Show indicator lights for open applications in the Dock'
+  notify:
+    - 'restart dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'show-process-indicators'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
