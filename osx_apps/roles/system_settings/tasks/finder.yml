@@ -90,3 +90,19 @@
     key: 'QuitMenuItem'
     key_type: 'int'
     value: '1'
+
+- name: 'Increase the size of icons in desktop view'
+  osx_plistbuddy:
+    key: ":DesktopViewSettings:IconViewSettings:iconSize"
+    key_type: 'float'
+    value: '80.000000'
+    persist_domain: 'com.apple.finder'
+    plist_file: '~/Library/Preferences/com.apple.finder.plist'
+
+- name: 'Increase the size of icons in standard view'
+  osx_plistbuddy:
+    key: ":StandardViewSettings:IconViewSettings:iconSize"
+    key_type: 'float'
+    value: '80.000000'
+    persist_domain: 'com.apple.finder'
+    plist_file: '~/Library/Preferences/com.apple.finder.plist'
