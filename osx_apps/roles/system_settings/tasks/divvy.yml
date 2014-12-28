@@ -1,0 +1,90 @@
+---
+- name: 'Disable divvy automatic updates'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'SUEnableAutomaticChecks'
+    key_type: 'int'
+    value: '0'
+    force: 'yes'
+
+- name: 'Enable the divvy global hotkey'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'useGlobalHotkey'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
+
+- name: 'Use cmd+shift+space as the divvy hotkey (keycode)'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_plistbuddy:
+    key: ":'globalHotkey':'keyCode'"
+    key_type: 'int'
+    value: '49'
+    persist_domain: 'com.mizage.direct.Divvy'
+    plist_file: '~/Library/Preferences/com.mizage.direct.Divvy.plist'
+    force: 'yes'
+
+- name: 'Use cmd+shift+space as the divvy hotkey (modifiers)'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_plistbuddy:
+    key: ":'globalHotkey':'modifiers'"
+    key_type: 'int'
+    value: '768'
+    persist_domain: 'com.mizage.direct.Divvy'
+    plist_file: '~/Library/Preferences/com.mizage.direct.Divvy.plist'
+    force: 'yes'
+
+- name: 'Show divvy in the menubar'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'showMenuIcon'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
+
+- name: 'Do not keep panel open until dismissed'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'mustDismissPanel'
+    key_type: 'int'
+    value: '0'
+    force: 'yes'
+
+- name: 'Do not cycle between screens when using shortcuts'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'useMonitorCycling'
+    key_type: 'int'
+    value: '0'
+    force: 'yes'
+
+- name: 'Do not enable animations'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'enableAnimations'
+    key_type: 'int'
+    value: '0'
+    force: 'yes'
