@@ -1,4 +1,6 @@
 ---
+- include_vars: divvy.yml
+
 - name: 'Disable divvy automatic updates'
   notify:
     - 'stop divvy'
@@ -87,4 +89,26 @@
     key: 'enableAnimations'
     key_type: 'int'
     value: '0'
+    force: 'yes'
+
+- name: 'Set the divvy registered to string'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'kXMRegName'
+    key_type: 'string'
+    value: '{{ divvy_licensed_to }}'
+    force: 'yes'
+
+- name: 'Set the divvy license string'
+  notify:
+    - 'stop divvy'
+    - 'start divvy'
+  osx_defaults:
+    domain: 'com.mizage.direct.Divvy'
+    key: 'kXMRegCode'
+    key_type: 'string'
+    value: '{{ divvy_license }}'
     force: 'yes'
