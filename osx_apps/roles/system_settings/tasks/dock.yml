@@ -144,3 +144,13 @@
     key_type: 'int'
     value: '1'
     force: 'yes'
+
+- name: 'Move the dock to the right side of the screen'
+  notify:
+    - 'restart dock'
+  osx_defaults:
+    domain: 'com.apple.dock'
+    key: 'orientation'
+    key_type: 'string'
+    value: 'right'
+    force: 'yes'
