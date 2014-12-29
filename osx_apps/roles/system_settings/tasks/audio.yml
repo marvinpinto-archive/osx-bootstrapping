@@ -5,3 +5,4 @@
     key: 'com.apple.sound.uiaudio.enabled'
     key_type: 'int'
     value: '0'
+    force: 'yes'

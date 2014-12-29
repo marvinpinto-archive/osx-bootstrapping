@@ -7,6 +7,7 @@
     key: 'mouse-over-hilite-stack'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Set the icon size of Dock items to 36 pixels'
   notify:
@@ -16,6 +17,7 @@
     key: 'tilesize'
     key_type: 'int'
     value: '36'
+    force: 'yes'
 
 - name: 'Minimize windows into their application’s icon'
   notify:
@@ -25,6 +27,7 @@
     key: 'minimize-to-application'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Enable spring loading for all Dock items'
   notify:
@@ -34,6 +37,7 @@
     key: 'enable-spring-load-actions-on-all-items'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Don’t animate opening applications from the Dock'
   notify:
@@ -43,6 +47,7 @@
     key: 'launchanim'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Speed up Mission Control animations'
   notify:
@@ -52,6 +57,7 @@
     key: 'expose-animation-duration'
     key_type: 'float'
     value: '0.1'
+    force: 'yes'
 
 - name: 'Don’t group windows by application in Mission Control'
   notify:
@@ -61,6 +67,7 @@
     key: 'expose-group-by-app'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Disable Dashboard'
   notify:
@@ -70,6 +77,7 @@
     key: 'mcx-disabled'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Don’t show Dashboard as a Space'
   notify:
@@ -79,6 +87,7 @@
     key: 'dashboard-in-overlay'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Don’t automatically rearrange Spaces based on most recent use'
   notify:
@@ -88,6 +97,7 @@
     key: 'mru-spaces'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Remove the auto-hiding Dock delay'
   notify:
@@ -97,6 +107,7 @@
     key: 'autohide-delay'
     key_type: 'float'
     value: '0'
+    force: 'yes'
 
 - name: 'Remove the animation when hiding/showing the Dock'
   notify:
@@ -106,6 +117,7 @@
     key: 'autohide-time-modifier'
     key_type: 'float'
     value: '0'
+    force: 'yes'
 
 - name: 'Automatically hide and show the Dock'
   notify:
@@ -115,6 +127,7 @@
     key: 'autohide'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Make Dock icons of hidden applications translucent'
   notify:
@@ -124,6 +137,7 @@
     key: 'showhidden'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Stop icons from bouncing in OS X Dock'
   notify:

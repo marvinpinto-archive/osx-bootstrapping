@@ -5,6 +5,7 @@
     key: 'EmptyTrashSecurely'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Disable the warning before emptying the Trash'
   osx_defaults:
@@ -12,6 +13,7 @@
     key: 'WarnOnEmptyTrash'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 - name: 'Use list view in all Finder windows by default'
@@ -20,6 +22,7 @@
     key: 'FXPreferredViewStyle'
     key_type: 'string'
     value: 'Nlsv'
+    force: 'yes'
 
 - name: 'Avoid creating .DS_Store files on network volumes'
   osx_defaults:
@@ -27,6 +30,7 @@
     key: 'DSDontWriteNetworkStores'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Remove the spring loading delay for directories'
   osx_defaults:
@@ -34,6 +38,7 @@
     key: 'com.apple.springing.delay'
     key_type: 'float'
     value: '0'
+    force: 'yes'
 
 - name: 'Enable spring loading for directories'
   osx_defaults:
@@ -41,6 +46,7 @@
     key: 'com.apple.springing.enabled'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Disable the warning when changing a file extension'
   osx_defaults:
@@ -48,6 +54,7 @@
     key: 'FXEnableExtensionChangeWarning'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Display full POSIX path as Finder window title'
   osx_defaults:
@@ -55,6 +62,7 @@
     key: '_FXShowPosixPathInTitle'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show the finder path bar'
   osx_defaults:
@@ -62,6 +70,7 @@
     key: 'ShowPathbar'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show the finder status bar'
   osx_defaults:
@@ -69,6 +78,7 @@
     key: 'ShowStatusBar'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show the filename extensions'
   osx_defaults:
@@ -76,6 +86,7 @@
     key: 'AppleShowAllExtensions'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Disable window animations and Get Info animations'
   osx_defaults:
@@ -83,6 +94,7 @@
     key: 'DisableAllAnimations'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Allow quitting via cmd+Q - doing so will also hide desktop icons'
   osx_defaults:
@@ -90,6 +102,7 @@
     key: 'QuitMenuItem'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Increase the size of icons in desktop view'
   osx_plistbuddy:
@@ -98,6 +111,7 @@
     value: '80.000000'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+    force: 'yes'
 
 - name: 'Increase the size of icons in standard view'
   osx_plistbuddy:
@@ -106,6 +120,7 @@
     value: '80.000000'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+    force: 'yes'
 
 - name: 'Show item info near icons in desktop view'
   osx_plistbuddy:
@@ -114,6 +129,7 @@
     value: 'true'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+    force: 'yes'
 
 - name: 'Show item info near icons in standard view'
   osx_plistbuddy:
@@ -122,6 +138,7 @@
     value: 'true'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+    force: 'yes'
 
 - name: 'Show item info to the right of the icons on the desktop'
   osx_plistbuddy:
@@ -130,6 +147,7 @@
     value: 'false'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
+    force: 'yes'
 
 - name: 'Show icons for external hard drives on the desktop'
   osx_defaults:
@@ -137,6 +155,7 @@
     key: 'ShowExternalHardDrivesOnDesktop'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show icons for hard drives on the desktop'
   osx_defaults:
@@ -144,6 +163,7 @@
     key: 'ShowHardDrivesOnDesktop'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show icons for mounted servers on the desktop'
   osx_defaults:
@@ -151,6 +171,7 @@
     key: 'ShowMountedServersOnDesktop'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Show icons for removable media on the desktop'
   osx_defaults:
@@ -158,3 +179,4 @@
     key: 'ShowRemovableMediaOnDesktop'
     key_type: 'int'
     value: '1'
+    force: 'yes'

@@ -5,6 +5,7 @@
     key: 'AppleHighlightColor'
     key_type: 'string'
     value: '0.764700 0.976500 0.568600'
+    force: 'yes'
 
 - name: 'Set the sidebar icon size to medium'
   osx_defaults:
@@ -12,6 +13,7 @@
     key: 'NSTableViewDefaultSizeMode'
     key_type: 'int'
     value: '2'
+    force: 'yes'
 
 # Possible values are: 'WhenScrolling', 'Automatic', and 'Always'
 - name: 'Always show scrollbars'
@@ -20,6 +22,7 @@
     key: 'AppleShowScrollBars'
     key_type: 'string'
     value: 'Always'
+    force: 'yes'
 
 - name: 'Set the desktop background'
   notify:
@@ -36,6 +39,7 @@
     key: 'NSAutomaticSpellingCorrectionEnabled'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Set the locale to en_CA'
   osx_defaults:
@@ -43,6 +47,7 @@
     key: 'AppleLocale'
     key_type: 'string'
     value: 'en_CA@currency=CAD'
+    force: 'yes'
 
 - name: 'Set the measurement units to inches'
   osx_defaults:
@@ -50,6 +55,7 @@
     key: 'AppleMeasurementUnits'
     key_type: 'string'
     value: 'Inches'
+    force: 'yes'
 
 - name: 'Do not use metric units'
   osx_defaults:
@@ -57,6 +63,7 @@
     key: 'AppleMetricUnits'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Set a blazingly fast keyboard repeat rate'
   osx_defaults:
@@ -64,6 +71,7 @@
     key: 'KeyRepeat'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Disable smart quotes'
   osx_defaults:
@@ -71,6 +79,7 @@
     key: 'NSAutomaticQuoteSubstitutionEnabled'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Disable smart dashes'
   osx_defaults:
@@ -78,6 +87,7 @@
     key: 'NSAutomaticDashSubstitutionEnabled'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Automatically quit the printer app once print jobs complete'
   osx_defaults:
@@ -85,6 +95,7 @@
     key: 'Quit When Finished'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Disable the "Are you sure you want to open this application?" dialog'
   osx_defaults:
@@ -92,6 +103,7 @@
     key: 'LSQuarantine'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Display ASCII control characters using caret notation in standard text views'
   osx_defaults:
@@ -99,6 +111,7 @@
     key: 'NSTextShowsControlCharacters'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Disable the crash reporter'
   osx_defaults:
@@ -106,6 +119,7 @@
     key: 'DialogType'
     key_type: 'string'
     value: 'none'
+    force: 'yes'
 
 - name: 'Check for software updates daily, not just once per week'
   osx_defaults:
@@ -113,3 +127,4 @@
     key: 'ScheduleFrequency'
     key_type: 'int'
     value: '1'
+    force: 'yes'

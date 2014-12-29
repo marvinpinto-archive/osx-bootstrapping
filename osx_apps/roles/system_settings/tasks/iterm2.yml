@@ -6,6 +6,7 @@
     value: 'xterm-256color'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not hide the tab bar when there is only one tab'
   osx_defaults:
@@ -13,6 +14,7 @@
     key: 'HideTab'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not open the profiles window on startup'
   osx_defaults:
@@ -20,6 +22,7 @@
     key: 'OpenBookmark'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Quit when all windows are closed'
   osx_defaults:
@@ -27,6 +30,7 @@
     key: 'QuitWhenAllWindowsClosed'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Confirm closing multiple sessions'
   osx_defaults:
@@ -34,6 +38,7 @@
     key: 'OnlyWhenMoreTabs'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Confirm quit iterm2 cmd+Q command'
   osx_defaults:
@@ -41,6 +46,7 @@
     key: 'PromptOnQuit'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Do not add bonjour hosts to profiles'
   osx_defaults:
@@ -48,6 +54,7 @@
     key: 'EnableRendezvous'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not check for updates automatically'
   osx_defaults:
@@ -55,6 +62,7 @@
     key: 'SUEnableAutomaticChecks'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not prompt for test release updates'
   osx_defaults:
@@ -62,6 +70,7 @@
     key: 'CheckTestRelease'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Copy to clipboard on selection'
   osx_defaults:
@@ -69,6 +78,7 @@
     key: 'CopySelection'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Copied text does not include trailing newline'
   osx_defaults:
@@ -76,6 +86,7 @@
     key: 'CopyLastNewline'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Enable smart window placement'
   osx_defaults:
@@ -83,6 +94,7 @@
     key: 'SmartPlacement'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Do not adjust window when changing font size'
   osx_defaults:
@@ -90,6 +102,7 @@
     key: 'AdjustWindowForFontSizeChange'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not use lion style fullscreen windows'
   osx_defaults:
@@ -97,6 +110,7 @@
     key: 'UseLionStyleFullscreen'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Set the tab style to metal'
   osx_defaults:
@@ -104,6 +118,7 @@
     key: 'WindowStyle'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Set the tab position at the top'
   osx_defaults:
@@ -111,6 +126,7 @@
     key: 'TabViewType'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Color tab labels on activity'
   osx_defaults:
@@ -118,6 +134,7 @@
     key: 'HighlightTabLabels'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Do not hide the tab number and tab close button'
   osx_defaults:
@@ -125,6 +142,7 @@
     key: 'UseCompactLabel'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not hide the tab activity indicator'
   osx_defaults:
@@ -132,6 +150,7 @@
     key: 'HideActivityIndicator'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Show tabs in full screen'
   osx_defaults:
@@ -147,6 +166,7 @@
     key: 'WindowNumber'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not show the current job name'
   osx_defaults:
@@ -154,6 +174,7 @@
     key: 'JobName'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Do not show the profile name'
   osx_defaults:
@@ -161,6 +182,7 @@
     key: 'ShowBookmarkName'
     key_type: 'int'
     value: '0'
+    force: 'yes'
 
 - name: 'Show a border around the window'
   osx_defaults:
@@ -168,6 +190,7 @@
     key: 'UseBorder'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Hide the scrollbar and resize control'
   osx_defaults:
@@ -175,6 +198,7 @@
     key: 'HideScrollbar'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Auto hide the menu bar when in non-lion fullscreen mode'
   osx_defaults:
@@ -182,6 +206,7 @@
     key: 'HideMenuBarInFullscreen'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Use the home directory as the working directory'
   osx_plistbuddy:
@@ -190,6 +215,7 @@
     value: 'No'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Use the smart cursor color'
   osx_plistbuddy:
@@ -198,6 +224,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the minimum contrast to 0'
   osx_plistbuddy:
@@ -206,6 +233,7 @@
     value: '0.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 187' (in RGB)
 - name: 'Set the R component of foreground color'
@@ -215,6 +243,7 @@
     value: '0.733333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 187' (in RGB)
 - name: 'Set the G component of foreground color'
@@ -224,6 +253,7 @@
     value: '0.733333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 187' (in RGB)
 - name: 'Set the B component of foreground color'
@@ -233,6 +263,7 @@
     value: '0.733333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 49' (in RGB)
 - name: 'Set the R component of background color'
@@ -242,6 +273,7 @@
     value: '0.192158'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 66' (in RGB)
 - name: 'Set the G component of background color'
@@ -251,6 +283,7 @@
     value: '0.258824'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 84' (in RGB)
 - name: 'Set the B component of background color'
@@ -260,6 +293,7 @@
     value: '0.329412'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 255' (in RGB)
 - name: 'Set the R component of bold color'
@@ -269,6 +303,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 255' (in RGB)
 - name: 'Set the G component of bold color'
@@ -278,6 +313,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of bold color'
@@ -287,6 +323,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 85' (in RGB)
 - name: 'Set the R component of selection color'
@@ -296,6 +333,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 85' (in RGB)
 - name: 'Set the G component of selection color'
@@ -305,6 +343,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 85' (in RGB)
 - name: 'Set the B component of selection color'
@@ -314,6 +353,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 242' (in RGB)
 - name: 'Set the R component of selected text color'
@@ -323,6 +363,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 242' (in RGB)
 - name: 'Set the G component of selected text color'
@@ -332,6 +373,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 242' (in RGB)
 - name: 'Set the B component of selected text color'
@@ -341,6 +383,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 0' (in RGB)
 - name: 'Set the R component of black/normal color'
@@ -350,6 +393,7 @@
     value: '0.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 0' (in RGB)
 - name: 'Set the G component of black/normal color'
@@ -359,6 +403,7 @@
     value: '0.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 0' (in RGB)
 - name: 'Set the B component of black/normal color'
@@ -368,6 +413,7 @@
     value: '0.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 85' (in RGB)
 - name: 'Set the R component of black/bright color'
@@ -377,6 +423,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 85' (in RGB)
 - name: 'Set the G component of black/bright color'
@@ -386,6 +433,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 85' (in RGB)
 - name: 'Set the B component of black/bright color'
@@ -395,6 +443,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 229' (in RGB)
 - name: 'Set the R component of red/normal color'
@@ -404,6 +453,7 @@
     value: '0.898039'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 34' (in RGB)
 - name: 'Set the G component of red/normal color'
@@ -413,6 +463,7 @@
     value: '0.133333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 34' (in RGB)
 - name: 'Set the B component of red/normal color'
@@ -422,6 +473,7 @@
     value: '0.133333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Bind cmd+h to previous tab (action)'
   osx_plistbuddy:
@@ -467,6 +519,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 85' (in RGB)
 - name: 'Set the G component of red/bright color'
@@ -476,6 +529,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 85' (in RGB)
 - name: 'Set the B component of red/bright color'
@@ -485,6 +539,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 166' (in RGB)
 - name: 'Set the R component of green/normal color'
@@ -494,6 +549,7 @@
     value: '0.650980'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 227' (in RGB)
 - name: 'Set the G component of green/normal color'
@@ -503,6 +559,7 @@
     value: '0.890196'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 45' (in RGB)
 - name: 'Set the B component of green/normal color'
@@ -512,6 +569,7 @@
     value: '0.176471'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 85' (in RGB)
 - name: 'Set the R component of green/bright color'
@@ -521,6 +579,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 255' (in RGB)
 - name: 'Set the G component of green/bright color'
@@ -530,6 +589,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 85' (in RGB)
 - name: 'Set the B component of green/bright color'
@@ -539,6 +599,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 252' (in RGB)
 - name: 'Set the R component of yellow/normal color'
@@ -548,6 +609,7 @@
     value: '0.988235'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 149' (in RGB)
 - name: 'Set the G component of yellow/normal color'
@@ -557,6 +619,7 @@
     value: '0.584314'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 30' (in RGB)
 - name: 'Set the B component of yellow/normal color'
@@ -566,6 +629,7 @@
     value: '0.117647'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 255' (in RGB)
 - name: 'Set the R component of yellow/bright color'
@@ -575,6 +639,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 255' (in RGB)
 - name: 'Set the G component of yellow/bright color'
@@ -584,6 +649,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 85' (in RGB)
 - name: 'Set the B component of yellow/bright color'
@@ -593,6 +659,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 196' (in RGB)
 - name: 'Set the R component of blue/normal color'
@@ -602,6 +669,7 @@
     value: '0.768628'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 141' (in RGB)
 - name: 'Set the G component of blue/normal color'
@@ -611,6 +679,7 @@
     value: '0.552941'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of blue/normal color'
@@ -620,6 +689,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 85' (in RGB)
 - name: 'Set the R component of blue/bright color'
@@ -629,6 +699,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 85' (in RGB)
 - name: 'Set the G component of blue/bright color'
@@ -638,6 +709,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of blue/bright color'
@@ -647,6 +719,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 250' (in RGB)
 - name: 'Set the R component of magenta/normal color'
@@ -656,6 +729,7 @@
     value: '0.980392'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 37' (in RGB)
 - name: 'Set the G component of magenta/normal color'
@@ -665,6 +739,7 @@
     value: '0.145098'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 115' (in RGB)
 - name: 'Set the B component of magenta/normal color'
@@ -674,6 +749,7 @@
     value: '0.450980'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 255' (in RGB)
 - name: 'Set the R component of magenta/bright color'
@@ -683,6 +759,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 85' (in RGB)
 - name: 'Set the G component of magenta/bright color'
@@ -692,6 +769,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of magenta/bright color'
@@ -701,6 +779,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 103' (in RGB)
 - name: 'Set the R component of cyan/normal color'
@@ -710,6 +789,7 @@
     value: '0.403922'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 217' (in RGB)
 - name: 'Set the G component of cyan/normal color'
@@ -719,6 +799,7 @@
     value: '0.850980'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 240' (in RGB)
 - name: 'Set the B component of cyan/normal color'
@@ -728,6 +809,7 @@
     value: '0.941176'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 85' (in RGB)
 - name: 'Set the R component of cyan/bright color'
@@ -737,6 +819,7 @@
     value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 255' (in RGB)
 - name: 'Set the G component of cyan/bright color'
@@ -746,6 +829,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of cyan/bright color'
@@ -755,6 +839,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 242' (in RGB)
 - name: 'Set the R component of white/normal color'
@@ -764,6 +849,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 242' (in RGB)
 - name: 'Set the G component of white/normal color'
@@ -773,6 +859,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 242' (in RGB)
 - name: 'Set the B component of white/normal color'
@@ -782,6 +869,7 @@
     value: '0.949020'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'R: 255' (in RGB)
 - name: 'Set the R component of white/bright color'
@@ -791,6 +879,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'G: 255' (in RGB)
 - name: 'Set the G component of white/bright color'
@@ -800,6 +889,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 # This roughly corresponds to 'B: 255' (in RGB)
 - name: 'Set the B component of white/bright color'
@@ -809,6 +899,7 @@
     value: '1.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the cursor type to Box'
   osx_plistbuddy:
@@ -817,6 +908,7 @@
     value: '2'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not allow blinking text'
   osx_plistbuddy:
@@ -825,6 +917,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not allow italic text'
   osx_plistbuddy:
@@ -833,6 +926,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Draw bold text in bold font'
   osx_plistbuddy:
@@ -841,6 +935,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Draw bold text in bright colors'
   osx_plistbuddy:
@@ -849,6 +944,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Anti alias the regular font'
   osx_plistbuddy:
@@ -857,6 +953,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Use Monaco 12 as the regular font'
   osx_plistbuddy:
@@ -865,6 +962,7 @@
     value: 'Monaco 12'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Anti alias the non-ascii font'
   osx_plistbuddy:
@@ -873,6 +971,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Use Monaco 12 as the non-ascii font'
   osx_plistbuddy:
@@ -881,6 +980,7 @@
     value: 'Monaco 12'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not treat ambiguous-width characters as double width'
   osx_plistbuddy:
@@ -889,6 +989,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the window transparency to opaque'
   osx_plistbuddy:
@@ -897,6 +998,7 @@
     value: '0.000000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Disable window blurring'
   osx_plistbuddy:
@@ -905,6 +1007,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the new window columns to 80'
   osx_plistbuddy:
@@ -913,6 +1016,7 @@
     value: '80'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the new window rows to 25'
   osx_plistbuddy:
@@ -921,6 +1025,7 @@
     value: '25'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not hide new windows after opening'
   osx_plistbuddy:
@@ -929,6 +1034,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Disable session-initiated window resizing'
   osx_plistbuddy:
@@ -937,6 +1043,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the window style to normal'
   osx_plistbuddy:
@@ -945,6 +1052,7 @@
     value: '0'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not allow the terminal to report window title'
   osx_plistbuddy:
@@ -953,6 +1061,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the character encoding to UTF-8'
   osx_plistbuddy:
@@ -961,6 +1070,7 @@
     value: '4'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Disable session-initiated printing'
   osx_plistbuddy:
@@ -969,6 +1079,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not disable save/restore alternate screen'
   osx_plistbuddy:
@@ -977,6 +1088,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not enable xterm mouse reporting'
   osx_plistbuddy:
@@ -985,6 +1097,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set the number scrollback lines to 5000'
   osx_plistbuddy:
@@ -993,6 +1106,7 @@
     value: '5000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not save lines to scrollback when an app status bar is present'
   osx_plistbuddy:
@@ -1001,6 +1115,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not save lines to scrollback in alternate screen mode'
   osx_plistbuddy:
@@ -1009,6 +1124,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not use the experimental modern parser'
   osx_plistbuddy:
@@ -1017,6 +1133,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not enable growl notifications'
   osx_plistbuddy:
@@ -1025,6 +1142,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not flash visual bell'
   osx_plistbuddy:
@@ -1033,6 +1151,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Set locale variables automatically'
   osx_plistbuddy:
@@ -1041,6 +1160,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Enabled the silence bell option'
   osx_plistbuddy:
@@ -1049,6 +1169,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not display the bell icon in tabs'
   osx_plistbuddy:
@@ -1057,6 +1178,7 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Automatically close a session when it ends'
   osx_plistbuddy:
@@ -1065,6 +1187,7 @@
     value: 'true'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not prompt before closing'
   osx_plistbuddy:
@@ -1073,6 +1196,7 @@
     value: '0'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
 
 - name: 'Do not send an ascii code when idle'
   osx_plistbuddy:
@@ -1081,3 +1205,4 @@
     value: 'false'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
+    force: 'yes'
