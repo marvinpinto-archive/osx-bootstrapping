@@ -1,0 +1,10 @@
+---
+- name: 'Ensure we can connect to this host'
+  ping:
+
+- name: 'Install ruby gems'
+  gem:
+    name: "{{ item }}"
+    executable: '~/.rbenv/versions/{{ rbenv_version }}/bin/gem'
+    state: 'latest'
+  with_items: 'ruby_gems'

@@ -10,3 +10,4 @@
     - 'homebrew_packages'
     - 'homebrew_cask_packages'
     - 'system_settings'
+    - 'ruby_gems'

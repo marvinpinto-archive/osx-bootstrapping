@@ -48,3 +48,6 @@ homebrew_cask_packages:
   - 'google-chrome-incognito'
   - 'google-chrome-new-window'
   - 'iterm-new-window'
+
+ruby_gems:
+  - 'puppet-lint'
