@@ -3,5 +3,5 @@
 # Use rbenv with ruby version {{ rbenv_version }}
 export RBENV_VERSION="{{ rbenv_version }}"
 
-# Override the path to add the rbenv shims
-export PATH="${HOME}/.rbenv/shims:$PATH"
+# Override the path to add the rbenv shims + binaries (including gems)
+export PATH="${HOME}/.rbenv/shims:${HOME}/.rbenv/versions/{{ rbenv_version }}/bin:$PATH"
