@@ -107,7 +107,7 @@
 - name: 'Increase the size of icons in desktop view'
   osx_plistbuddy:
     key: ":DesktopViewSettings:IconViewSettings:iconSize"
-    key_type: 'float'
+    key_type: 'real'
     value: '80.000000'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'
@@ -116,7 +116,7 @@
 - name: 'Increase the size of icons in standard view'
   osx_plistbuddy:
     key: ":StandardViewSettings:IconViewSettings:iconSize"
-    key_type: 'float'
+    key_type: 'real'
     value: '80.000000'
     persist_domain: 'com.apple.finder'
     plist_file: '~/Library/Preferences/com.apple.finder.plist'

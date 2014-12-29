@@ -904,7 +904,7 @@
 - name: 'Set the cursor type to Box'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Cursor Type'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '2'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1012,7 +1012,7 @@
 - name: 'Set the new window columns to 80'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Columns'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '80'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1021,7 +1021,7 @@
 - name: 'Set the new window rows to 25'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Rows'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '25'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1048,7 +1048,7 @@
 - name: 'Set the window style to normal'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Window Type'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '0'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1066,7 +1066,7 @@
 - name: 'Set the character encoding to UTF-8'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Character Encoding'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '4'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1102,7 +1102,7 @@
 - name: 'Set the number scrollback lines to 5000'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Scrollback Lines'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '5000'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
@@ -1192,7 +1192,7 @@
 - name: 'Do not prompt before closing'
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Prompt Before Closing 2'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '0'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'

@@ -29,7 +29,7 @@
     - 'start divvy'
   osx_plistbuddy:
     key: ":'globalHotkey':'keyCode'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '49'
     persist_domain: 'com.mizage.direct.Divvy'
     plist_file: '~/Library/Preferences/com.mizage.direct.Divvy.plist'
@@ -41,7 +41,7 @@
     - 'start divvy'
   osx_plistbuddy:
     key: ":'globalHotkey':'modifiers'"
-    key_type: 'int'
+    key_type: 'integer'
     value: '768'
     persist_domain: 'com.mizage.direct.Divvy'
     plist_file: '~/Library/Preferences/com.mizage.direct.Divvy.plist'
