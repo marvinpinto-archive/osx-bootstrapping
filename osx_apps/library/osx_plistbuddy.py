@@ -112,6 +112,9 @@ def main():
     force = module.boolean(module.params['force'])
 
     current_value = get_value(module, key, plist_file)
+    if key_type not in ['string', 'dict', 'bool', 'real', 'integer']:
+        msg = 'Invalid key type %s' % key_type
+        module.fail_json(msg=msg)
 
     if (not force) and (current_value is None):
         msg = '%s does not exist and force not specified' % key
