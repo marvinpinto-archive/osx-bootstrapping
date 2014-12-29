@@ -5,6 +5,7 @@
     key: 'AppleFontSmoothing'
     key_type: 'int'
     value: '2'
+    force: 'yes'
 
 - name: 'Disable shadow in screenshots'
   osx_defaults:
@@ -12,6 +13,7 @@
     key: 'disable-shadow'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 # Other options: BMP, GIF, JPG, PDF, TIFF
 - name: 'Save screenshots in PNG format'
@@ -20,6 +22,7 @@
     key: 'type'
     key_type: 'string'
     value: 'png'
+    force: 'yes'
 
 - name: 'Save screenshots to the ~/tmp directory'
   osx_defaults:
@@ -27,6 +30,7 @@
     key: 'location'
     key_type: 'string'
     value: '/Users/marvin/tmp'
+    force: 'yes'
 
 - name: 'Ask for the password immediately after sleep or screen saver begins'
   osx_defaults:
@@ -34,6 +38,7 @@
     key: 'askForPassword'
     key_type: 'int'
     value: '1'
+    force: 'yes'
 
 - name: 'Set the ask delay to immediate'
   osx_defaults:
@@ -41,3 +46,4 @@
     key: 'askForPasswordDelay'
     key_type: 'int'
     value: '0'
+    force: 'yes'
