@@ -27,4 +27,4 @@
 - name: 'Set the network time server to time.apple.com'
   command: '/usr/sbin/systemsetup -setnetworktimeserver time.apple.com'
   sudo: 'yes'
-  when: 'not command_output.stdout == "Network Time Server: time.apple.com."'
+  when: 'not command_output.stdout == "Network Time Server: time.apple.com"'
