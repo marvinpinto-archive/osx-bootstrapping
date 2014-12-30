@@ -24,15 +24,6 @@
     value: 'Always'
     force: 'yes'
 
-- name: 'Set the desktop background'
-  notify:
-    - 'restart dock'
-  sqlite3:
-    database: '/Users/marvin/Library/Application Support/Dock/desktoppicture.db'
-    check_stmt: 'select * from data'
-    expected_check_output: '/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png'
-    update_stmt: 'delete from data; insert into data values (\"/Library/Desktop Pictures/Solid Colors/Solid Gray Dark.png\")'
-
 - name: 'Disable auto-correct'
   osx_defaults:
     domain: 'NSGlobalDomain'
