@@ -1,0 +1,8 @@
+---
+- name: 'Use all Fn keys as standard functions keys'
+  osx_defaults:
+    domain: 'NSGlobalDomain'
+    key: 'com.apple.keyboard.fnState'
+    key_type: 'int'
+    value: '1'
+    force: 'yes'
