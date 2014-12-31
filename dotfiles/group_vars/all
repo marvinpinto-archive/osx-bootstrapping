@@ -12,6 +12,7 @@ aliases_managed_files:
 functions_managed_files:
   - '0-functions'
   - '1-git_functions'
+  - '2-osx_functions'
 
 exports_managed_files:
   - '0-exports'

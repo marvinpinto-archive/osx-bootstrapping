@@ -6,3 +6,4 @@
 - include: bash.yml
 - include: exports.yml
 - include: symlinks.yml
+- include: functions.yml
