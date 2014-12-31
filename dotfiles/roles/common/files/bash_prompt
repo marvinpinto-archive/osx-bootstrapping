@@ -5,7 +5,7 @@ function __prompt_command() {
   PS1=""
 
   # Set the terminal title
-  echo -ne "\033]0;${USER}@${HOSTNAME}\007"
+  echo -ne "\033]0;${HOSTNAME}\007"
 
   local RED="\[$(tput setaf 1)\]"
   local GREEN="\[$(tput setaf 2)\]"
@@ -27,7 +27,7 @@ function __prompt_command() {
   fi
 
   # Second line of bash prompt
-  PS1+="[\u@\h: \t]${RESET}${PROMPTCOL} \w${RESET}\n"
+  PS1+="[\H: \t]${RESET}${PROMPTCOL} \w${RESET}\n"
 
   # Print out the last exit code, if it wasn't zero
   if [ $EXIT != 0 ]; then
