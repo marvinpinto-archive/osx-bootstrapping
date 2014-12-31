@@ -666,7 +666,7 @@
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Ansi 4 Color':'Red Component'"
     key_type: 'real'
-    value: '0.768628'
+    value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
     force: 'yes'
@@ -676,7 +676,7 @@
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Ansi 4 Color':'Green Component'"
     key_type: 'real'
-    value: '0.552941'
+    value: '0.333333'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
     force: 'yes'
@@ -696,7 +696,7 @@
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Ansi 12 Color':'Red Component'"
     key_type: 'real'
-    value: '0.333333'
+    value: '0.768628'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
     force: 'yes'
@@ -706,7 +706,7 @@
   osx_plistbuddy:
     key: ":'New Bookmarks':0:'Ansi 12 Color':'Green Component'"
     key_type: 'real'
-    value: '0.333333'
+    value: '0.552941'
     persist_domain: 'com.googlecode.iterm2'
     plist_file: '~/Library/Preferences/com.googlecode.iterm2.plist'
     force: 'yes'
