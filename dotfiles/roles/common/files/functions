@@ -159,3 +159,19 @@ function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
 
+
+# Clean out a bunch of my crap
+function cleancrap() {
+  local cleanfiles="${HOME}/.aliases ${HOME}/.ansible ${HOME}/.bash* ${HOME}/bin ${HOME}/.exports ${HOME}/.functions ${HOME}/.git* ${HOME}/.inputrc ${HOME}/.tmux* ${HOME}/.vim*"
+  if [ -z "${1}" ]; then
+    echo "Usage cleancrap -y"
+    echo "Would have blown away ${cleanfiles}"
+    return 1
+  fi
+
+  for f in ${cleanfiles}
+  do
+    echo "Deleting: ${f}"
+    rm -rf "${f}"
+  done
+}
