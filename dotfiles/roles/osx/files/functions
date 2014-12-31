@@ -1,11 +1,11 @@
 # vim: set filetype=sh :
 
 dfremote() {
-  dfremote_usage() { echo "Usage: dfremote [-y] -s <server> -u <user>"; }
+  dfremote_usage() { echo "Usage: dfremote [-y] [-m umask] -s <server> -u <user>"; }
   local playbookdir="${HOME}/projects/osx-bootstrapping"
 
-  local OPTIND o s u y
-  while getopts ":s:u:y" o; do
+  local OPTIND o s u y m
+  while getopts ":s:u:m:y" o; do
     case "${o}" in
     s)
       s="${OPTARG}"
@@ -15,6 +15,9 @@ dfremote() {
       ;;
     y)
       y="yes"
+      ;;
+    m)
+      m="${OPTARG}"
       ;;
     *)
       dfremote_usage
@@ -35,5 +38,10 @@ dfremote() {
     echo "-y not supplied - running in CHECK mode"
   fi
 
-  ansible-playbook ${checkarg} -v --diff --ask-vault-pass -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "user=${u}"
+  local extravars="user=${u}"
+  if [ -n "${m}" ]; then
+    extravars="${extravars} umask=${m}"
+  fi
+
+  ansible-playbook ${checkarg} -v --diff --ask-vault-pass -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "${extravars}"
 }
