@@ -7,8 +7,8 @@
     force: 'yes'
 
 - name: 'Put the .gitconfig file in place'
-  copy:
-    src: 'gitconfig'
+  template:
+    src: 'gitconfig.j2'
     dest: '~/.gitconfig'
     mode: '0600'
     force: 'yes'
