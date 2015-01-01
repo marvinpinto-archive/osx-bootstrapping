@@ -8,3 +8,6 @@ fi
 # Set iterm's background color to something sane
 MY_COLOR="12519,82889,21498"
 osascript -e 'tell application "iTerm" to set background color of (current session of current terminal) to {'"${MY_COLOR}"'}'
+
+# Use git completion for the 'g' alias as well
+__git_complete g __git_main
