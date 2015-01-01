@@ -33,7 +33,7 @@ alias apgf='apg -a 0 -n 10 -m 10 -t -E lI10O -M NCSL'
 alias vi="/usr/local/bin/vim"
 
 # Run the ansible playbook that puts all the dotfiles in place locally
-alias dflocal='ansible-playbook -v --diff --ask-vault-pass -i ~/projects/osx-bootstrapping/dotfiles/inventory ~/projects/osx-bootstrapping/dotfiles/osx.yml'
+alias dflocal='ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass -i ~/projects/osx-bootstrapping/dotfiles/inventory ~/projects/osx-bootstrapping/dotfiles/osx.yml'
 
 # Run the ansible playbook that install all osx apps w/settings (locally)
-alias dfosx="ansible-playbook -v --diff --ask-vault-pass --ask-sudo-pass -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}'"
+alias dfosx="ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass --ask-sudo-pass -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}'"
