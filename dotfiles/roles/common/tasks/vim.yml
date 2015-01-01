@@ -19,4 +19,4 @@
     src: "{{ playbook_dir }}/roles/common/files/vim/"
     dest: '~/.vim'
     delete: 'yes'
-    rsync_opts: '-r --delete --force-delete --exclude=.netrwhist'
+    rsync_opts: '-r --delete --force-delete --exclude=.netrwhist --checksum'
