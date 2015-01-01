@@ -43,5 +43,5 @@ function dfremote() {
     extravars="${extravars} umask=${m}"
   fi
 
-  ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook ${checkarg} -v --diff --ask-vault-pass -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "${extravars}"
+  ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook ${checkarg} --ask-vault-pass -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "${extravars}"
 }
