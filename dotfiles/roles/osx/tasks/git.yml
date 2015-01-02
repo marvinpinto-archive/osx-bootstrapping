@@ -1,6 +1,4 @@
 ---
-- include_vars: github.yml
-
 - name: 'Create the ~/.config directory'
   file:
     path: '~/.config'

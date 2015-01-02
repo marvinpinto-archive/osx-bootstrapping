@@ -1,6 +1,4 @@
 ---
-- include_vars: github_enterprise.yml
-
 - name: 'Put the .gitignore_global file in place'
   copy:
     src: 'gitignore_global'
