@@ -1,0 +1,6 @@
+{% for i in hub_config_entries %}
+{{ i['name'] }}
+- protocol: {{ i['protocol'] }}
+  user: {{ i['user'] }}
+  oauth_token: {{ i['oauth_token'] }}
+{% endfor %}

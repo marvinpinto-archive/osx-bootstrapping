@@ -1,0 +1,16 @@
+---
+- include_vars: github.yml
+
+- name: 'Create the ~/.config directory'
+  file:
+    path: '~/.config'
+    state: 'directory'
+    mode: '0700'
+    force: 'yes'
+
+- name: 'Put the ~/.config/hub file in place'
+  template:
+    src: 'hub.j2'
+    dest: '~/.config/hub'
+    mode: '0600'
+    force: 'yes'

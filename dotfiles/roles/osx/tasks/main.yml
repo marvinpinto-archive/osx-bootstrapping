@@ -7,3 +7,4 @@
 - include: exports.yml
 - include: symlinks.yml
 - include: functions.yml
+- include: git.yml
