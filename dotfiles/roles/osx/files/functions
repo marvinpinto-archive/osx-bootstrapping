@@ -52,3 +52,8 @@ function dfremote() {
 function ghe() {
   GITHUB_HOST=$GITHUB_ENTERPRISE_DOMAIN hub $*
 }
+
+# Setup an existing repo to use GitHub Enterprise exclusively
+function ghe-setup() {
+  git config --add hub.host $GITHUB_ENTERPRISE_DOMAIN
+}
