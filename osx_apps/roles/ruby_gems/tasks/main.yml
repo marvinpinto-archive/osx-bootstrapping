@@ -7,4 +7,5 @@
     name: "{{ item }}"
     executable: '~/.rbenv/versions/{{ rbenv_version }}/bin/gem'
     state: 'latest'
+    user_install: 'no'
   with_items: 'ruby_gems'
