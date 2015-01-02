@@ -1,2 +1,8 @@
 # vim: set filetype=sh :
-alias g="git"
+
+# Alias 'g' to the 'hub' binary, if it's there. Otherwise alias 'g' to 'git'
+if hash hub 2> /dev/null; then
+  alias g="hub"
+else
+  alias g="git"
+fi
