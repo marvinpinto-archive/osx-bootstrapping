@@ -1,7 +1,7 @@
 ---
 - name: 'Put the ~/.functions/2-osx_functions file in place'
-  copy:
-    src: 'functions'
+  template:
+    src: 'functions.j2'
     dest: '~/.functions/2-osx_functions'
     mode: '0600'
     force: 'yes'
