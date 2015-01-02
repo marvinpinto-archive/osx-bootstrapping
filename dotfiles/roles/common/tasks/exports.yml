@@ -5,3 +5,10 @@
     dest: '~/.exports/0-exports'
     mode: '0600'
     force: 'yes'
+
+- name: 'Put the ~/.exports/1-ghe_exports file in place'
+  template:
+    src: 'ghe_export.j2'
+    dest: '~/.exports/1-ghe_exports'
+    mode: '0600'
+    force: 'yes'
