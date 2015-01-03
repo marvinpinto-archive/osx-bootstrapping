@@ -36,6 +36,7 @@ homebrew_packages:
   - 'vagrant-completion'
   - 'hub'
   - 'brew-cask'
+  - 'tmuxinator-completion'
 
 homebrew_cask_packages:
   - 'divvy'
@@ -54,3 +55,4 @@ homebrew_cask_packages:
 
 ruby_gems:
   - 'puppet-lint'
+  - 'tmuxinator'

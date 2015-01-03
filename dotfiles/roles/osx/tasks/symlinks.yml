@@ -19,3 +19,10 @@
     dest: '~/.password-store'
     state: 'link'
     force: 'yes'
+
+- name: 'symlink ~/Dropbox/projects/tmuxinator-templates to ~/.tmuxinator'
+  file:
+    src: '~/Dropbox/projects/tmuxinator-templates'
+    dest: '~/.tmuxinator'
+    state: 'link'
+    force: 'yes'
