@@ -36,4 +36,4 @@ alias vi="/usr/local/bin/vim"
 alias dflocal='ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass -i ~/projects/osx-bootstrapping/dotfiles/inventory ~/projects/osx-bootstrapping/dotfiles/osx.yml | ~/projects/osx-bootstrapping/sanitize_output.awk'
 
 # Run the ansible playbook that install all osx apps w/settings (locally)
-alias dfosx="ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass --ask-sudo-pass -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}'"
+alias dfosx="ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}' --limit '${HOSTNAME}'"

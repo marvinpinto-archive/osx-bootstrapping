@@ -73,6 +73,7 @@ $ ansible-playbook \
   --ask-vault-pass \
   --ask-sudo-pass \
   --extra-vars 'computername=<COMPUTER-NAME>' \
+  --limit '<COMPUTER-NAME>' \
   -i /tmp/osx-bootstrapping/osx_apps/inventory /tmp/osx-bootstrapping/osx_apps/osx.yml
 ```
 

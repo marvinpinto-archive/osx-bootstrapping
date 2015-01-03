@@ -1,2 +1,2 @@
 [osx]
-localhost ansible_connection=local
+marvin-mba ansible_connection=local
