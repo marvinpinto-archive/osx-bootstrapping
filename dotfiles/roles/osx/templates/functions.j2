@@ -43,7 +43,7 @@ function dfremote() {
     extravars="${extravars} umask=${m}"
   fi
 
-  ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook ${checkarg} --ask-vault-pass -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "${extravars}"
+  ANSIBLE_CONFIG=${playbookdir}/ansible.cfg ansible-playbook ${checkarg} --vault-password-file ${playbookdir}/vault_from_gpg_agent.py -i ${s}, ${playbookdir}/dotfiles/servers.yml --extra-vars "${extravars}"
 }
 
 # Function wrapper around 'hub' for Github Enterprise

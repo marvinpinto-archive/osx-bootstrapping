@@ -33,7 +33,7 @@ alias apgf='apg -a 0 -n 10 -m 10 -t -E lI10O -M NCSL'
 alias vi="/usr/local/bin/vim"
 
 # Run the ansible playbook that puts all the dotfiles in place locally
-alias dflocal='ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass -i ~/projects/osx-bootstrapping/dotfiles/inventory ~/projects/osx-bootstrapping/dotfiles/osx.yml | ~/projects/osx-bootstrapping/sanitize_output.awk'
+alias dflocal='ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --vault-password-file ~/projects/osx-bootstrapping/vault_from_gpg_agent.py -i ~/projects/osx-bootstrapping/dotfiles/inventory ~/projects/osx-bootstrapping/dotfiles/osx.yml | ~/projects/osx-bootstrapping/sanitize_output.awk'
 
 # Run the ansible playbook that install all osx apps w/settings (locally)
-alias dfosx="ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --ask-vault-pass -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}' --limit '${HOSTNAME}'"
+alias dfosx="ANSIBLE_CONFIG=~/projects/osx-bootstrapping/ansible.cfg ansible-playbook --vault-password-file ~/projects/osx-bootstrapping/vault_from_gpg_agent.py -i ~/projects/osx-bootstrapping/osx_apps/inventory ~/projects/osx-bootstrapping/osx_apps/osx.yml --extra-vars 'computername=${HOSTNAME}' --limit '${HOSTNAME}'"
