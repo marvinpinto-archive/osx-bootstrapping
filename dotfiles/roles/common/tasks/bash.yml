@@ -1,7 +1,7 @@
 ---
 - name: 'Put the .bashrc file in place'
-  copy:
-    src: 'bashrc'
+  template:
+    src: 'bashrc.j2'
     dest: '~/.bashrc'
     mode: '0600'
     force: 'yes'
