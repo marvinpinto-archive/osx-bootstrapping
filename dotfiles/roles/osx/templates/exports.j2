@@ -5,3 +5,8 @@ export RBENV_VERSION="{{ rbenv_version }}"
 
 # Override the path to add the rbenv shims + binaries (including gems)
 export PATH="${HOME}/.rbenv/shims:${HOME}/.rbenv/versions/{{ rbenv_version }}/bin:$PATH"
+
+# Set LC_IDENTIFICATION to the contents of the master dfversion file - used to
+# determine if dotfiles are stale on remote servers
+LC_IDENTIFICATION=`git -C ${HOME}/projects/osx-bootstrapping --no-pager show master:dotfiles/roles/common/files/dfversion`
+export LC_IDENTIFICATION
