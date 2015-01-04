@@ -1,0 +1,7 @@
+---
+- name: 'Put the ~/.dfversion file in place'
+  copy:
+    src: 'dfversion'
+    dest: '~/.dfversion'
+    mode: '0600'
+    force: 'yes'

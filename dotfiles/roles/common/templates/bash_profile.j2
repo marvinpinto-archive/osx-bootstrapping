@@ -27,13 +27,16 @@ for file in ~/.bash/*; do
 done
 unset file
 
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
+# Verify the stateleness of my dotfiles
+if [ ! -f ~/.dfversion -o -z "${LC_IDENTIFICATION}" ]; then
+  echo "*** could not deterine if dotfiles are stale ***"
+else
+  DFVERSION=`cat ~/.dfversion`
+  if [ "$DFVERSION" != "$LC_IDENTIFICATION" ]; then
+    echo "*** YOUR DOTFILES ARE STALE ***"
+  fi
+fi
+unset DFVERSION
 
 # Set a role-specific umask
 umask {{ umask }}

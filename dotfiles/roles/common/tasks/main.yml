@@ -10,3 +10,4 @@
 - include: inputrc.yml
 - include: exports.yml
 - include: bash.yml
+- include: dfversion.yml
