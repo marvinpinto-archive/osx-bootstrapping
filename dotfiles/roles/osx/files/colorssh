@@ -1,9 +1,11 @@
 #!/bin/bash
 
 host=$1
-defaultcolor="12519,82889,21498"
+default_r=49
+default_g=66
+default_b=84
 defaulttitle="localhost"
-LUMIN_THRESHOLD=19000
+LUMIN_THRESHOLD=75
 STARTING_FACTOR=0.48
 
 
@@ -16,60 +18,83 @@ trap cleanup 1 2 3 6
 
 
 # Cleanup after ourselves
-cleanup() {
-  set_iterm_color ${defaultcolor}
-  set_iterm_title ${defaulttitle}
+function cleanup() {
+  get_iterm_color_string $default_r $default_g $default_b
+  defaultcolor=$__
+  set_iterm_color "${defaultcolor}"
+  set_iterm_title "${defaulttitle}"
 }
 
 
-# Convert the given input string into a suitable (rgb) hex value. This is really simple and I couldn't be bothered making it better.
-get_rgb() {
-  hex=`echo "$1" | md5`
-  hex=`echo $hex | tr '[:lower:]' '[:upper:]'`
+function get_r() {
+  local mhash=`echo "$1" | md5`
+  local rr=$((0x${mhash:0:2}))
+  __=$rr
+}
 
-  # Split up the 33-char md5 string into three pieces of 11
-  local r=${hex:0:11}
-  local g=${hex:11:11}
-  local b=${hex:22:11}
 
-  # Convert base 16 to base 10
-  local r=`echo "ibase=16; $r" | bc`
-  local g=`echo "ibase=16; $g" | bc`
-  local b=`echo "ibase=16; $b" | bc`
+function get_g() {
+  local mhash=`echo "$1" | md5`
+  local gg=$((0x${mhash:2:2}))
+  __=$gg
+}
 
-  # Mod these rgb values down to <= 65535
-  local r=`echo "$r % 65535" | bc`
-  local g=`echo "$g % 65535" | bc`
-  local b=`echo "$b % 65535" | bc`
 
-  local factor=$STARTING_FACTOR
-  local lumin=`calc_perceived_luminance "${r},${g},${b}"`
-  while [ $lumin -gt $LUMIN_THRESHOLD ]; do
-    # Darken each component by a factor
-    r=`echo "($r - ($factor * $r))/1" | bc`
-    g=`echo "($g - ($factor * $g))/1" | bc`
-    b=`echo "($b - ($factor * $b))/1" | bc`
-    lumin=`calc_perceived_luminance "${r},${g},${b}"`
-    factor=`echo "$factor + 0.01" | bc`
-  done
+function get_b() {
+  local mhash=`echo "$1" | md5`
+  local bb=$((0x${mhash:4:2}))
+  __=$bb
+}
 
-  # Return the value
-  echo "${r},${g},${b}"
+
+function get_iterm_color_string() {
+  local rr=$1
+  local gg=$2
+  local bb=$3
+  # set background color to {$(($R*65535/255)), $(($G*65535/255)), $(($B*65535/255))}
+  local retColor=$(($rr*65535/255))
+  retColor="${retColor}, $(($gg*65535/255))"
+  retColor="${retColor}, $(($bb*65535/255))"
+  __=$retColor
 }
 
 
 # Calculate the perceived luminance
 # Nothing too fancy here, idea from: http://stackoverflow.com/a/596243/1101070
-calc_perceived_luminance() {
-  local input=$1
-  local r=$(echo $input | cut -d',' -f1)
-  local g=$(echo $input | cut -d',' -f2)
-  local b=$(echo $input | cut -d',' -f3)
-  # local res=`echo "0.299*${r} + 0.587*${g} + 0.114*${b}" | bc`
-  local res=`echo "0.2126*${r} + 0.7152*${g} + 0.0722*${b}" | bc`
+function calc_perceived_luminance() {
+  local rr=$1
+  local gg=$2
+  local bb=$3
+  local res=`echo "0.2126*${rr} + 0.7152*${gg} + 0.0722*${bb}" | bc`
   # Round it down to the nearest integer
   local res=`echo "$res / 1" | bc`
-  echo "${res}"
+  ___=$res
+}
+
+
+# Darken the color, if need be
+function darken_rgb() {
+  local rr=$1
+  local gg=$2
+  local bb=$3
+  local factor=$STARTING_FACTOR
+  calc_perceived_luminance $rr $gg $bb
+  local lumin=$___
+  local ctr=0
+  while [ $lumin -gt $LUMIN_THRESHOLD ]; do
+    # Darken each component by a factor
+    rr=`echo "($rr - ($factor * $rr))/1" | bc`
+    gg=`echo "($gg - ($factor * $gg))/1" | bc`
+    bb=`echo "($bb - ($factor * $bb))/1" | bc`
+    calc_perceived_luminance $rr $gg $bb
+    lumin=$___
+    factor=`echo "$factor + 0.01" | bc`
+    ctr=$(($ctr+1))
+  done
+
+  ___dr=$rr
+  ___dg=$gg
+  ___db=$bb
 }
 
 
@@ -85,8 +110,19 @@ set_iterm_color() {
 }
 
 
-mColor=`get_rgb ${host}`
-set_iterm_color "${mColor}"
+get_r $host
+mr=$__
+get_g $host
+mg=$__
+get_b $host
+mb=$__
+darken_rgb $mr $mg $mb
+mr=$___dr
+mg=$___dg
+mb=$___db
+get_iterm_color_string $mr $mg $mb
+iterm_color_string=$__
+
+set_iterm_color "${iterm_color_string}"
 ssh ${host}
 cleanup
-
