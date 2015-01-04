@@ -27,6 +27,17 @@ for file in ~/.bash/*; do
 done
 unset file
 
+# Verify the stateleness of my dotfiles
+if [ ! -f ~/.dfversion -o -z "${LC_IDENTIFICATION}" ]; then
+  echo "*** could not deterine if dotfiles are stale ***"
+else
+  DFVERSION=`cat ~/.dfversion`
+  if [ "$DFVERSION" != "$LC_IDENTIFICATION" ]; then
+    echo "*** YOUR DOTFILES ARE STALE ***"
+  fi
+fi
+unset DFVERSION
+
 # Set a role-specific umask
 umask {{ umask }}
 
