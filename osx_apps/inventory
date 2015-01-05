@@ -1,2 +1,3 @@
 [osx]
 marvin-mba ansible_connection=local
+marvin-mbp ansible_connection=local
