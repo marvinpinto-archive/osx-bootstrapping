@@ -71,5 +71,6 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
   alias "$method"="lwp-request -m '$method'"
 done
 
-# Kill off a tmux session
+# List and kill off tmux sessions
+alias tls='tmux ls'
 alias tks='tmux kill-session -t '
