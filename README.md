@@ -1,5 +1,7 @@
 # Yet another dotfile/package management framework?
 
+![unmaintained](http://img.shields.io/badge/status-unmaintained-red.png)
+
 Yep. My machine has been reformatted one too many times and because I hate
 manually setting up things from scratch, here we are. This was also a good
 opportunity to dig into Ansible as well and that's my excuse.
